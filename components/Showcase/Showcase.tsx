@@ -1,7 +1,6 @@
 import { Typography, Row, Col } from "antd";
 import React from "react";
 import { ShowcaseItem } from "types";
-import Image from "next/image";
 
 interface Props {
   title: string;
@@ -18,22 +17,22 @@ const Showcase = ({
   itemClassName,
   className,
 }: Props) => {
+  console.log(items);
   return (
     <div className={`${className} flex flex-col align-center justify-center`}>
-      <Typography.Title level={3} className={titleClassName}>{title}</Typography.Title>
+      <Typography.Text className={titleClassName || "text-xl"}>
+        {title}
+      </Typography.Text>
       <Row justify="center">
         {items.map((item) => (
           <Col
             key={item.label}
             className={`${itemClassName} h-16`}
             xs={8}
-            md={6}
+            md={4}
           >
             {item.asset ? (
-              <Image
-                src={item.asset}
-                alt={`${item.label} logo`}
-              />
+              item.asset
             ) : (
               <Typography.Text key={item.label}>{item.label}</Typography.Text>
             )}

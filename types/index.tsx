@@ -1,5 +1,5 @@
 export interface ShowcaseItem {
     label: string;
-    asset?: StaticImageData;
+    asset?: JSX.Element;
     link?: string;
 }

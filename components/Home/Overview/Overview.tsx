@@ -32,7 +32,7 @@ const Overview = (props: Props) => {
   return (
     <div>
       <Row>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={10}>
           <BasicCard
             tabList={tabList}
             onTabChange={(key) => setTab(key as TTab)}
@@ -40,7 +40,7 @@ const Overview = (props: Props) => {
             <Typography.Text>{contentList[tab]}</Typography.Text>
           </BasicCard>
         </Col>
-        <Col sm={24} md={12}>
+        <Col sm={24} md={8}>
             <Carousel>
                 <Image src={LovedOnesMockup} alt="Mockup with loved ones products"/>
                 <Image src={EducatorsMockup} alt="Mockup with loved ones products"/>

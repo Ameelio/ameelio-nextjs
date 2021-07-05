@@ -5,19 +5,20 @@ import Footer from "../components/Footer";
 import Logo from "public/logo.svg";
 import Home from '../components/Home';
 import { InferGetStaticPropsType } from 'next'
-import { FUNDERS, MEDIA } from "utils/constants";
+// import { FUNDERS, MEDIA } from "utils/constants";
 
 
-export async function getStaticProps() {
-  return {
-    props: {
-      media: MEDIA,
-      funders: FUNDERS,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       media: MEDIA,
+//       funders: FUNDERS,
+//     },
+//   };
+// }
+//  media, funders }: InferGetStaticPropsType<typeof getStaticProps>
 
-export default function HomePage({ media, funders }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function HomePage() {
   return (
     <Layout>
       <Head>
@@ -30,7 +31,6 @@ export default function HomePage({ media, funders }: InferGetStaticPropsType<typ
       </Head>
       <Layout.Header className="bg-white">
         <Menu mode="horizontal">
-          {/* <Image src={Logo} alt="Ameelio logo" width={75} height={15} /> */}
           <Menu.SubMenu title="Platform">
             <Menu.Item>Connect</Menu.Item>
             <Menu.Item>Letters</Menu.Item>
@@ -40,7 +40,7 @@ export default function HomePage({ media, funders }: InferGetStaticPropsType<typ
           <Menu.Item>Our Story</Menu.Item>
         </Menu>
       </Layout.Header>
-      <Home media={media} funders={funders}/>
+      <Home />
 
       <Layout.Footer><Footer /></Layout.Footer>
     </Layout>

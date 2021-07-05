@@ -1,26 +1,24 @@
 import { Layout } from "antd";
 import React from "react";
-import { ShowcaseItem } from "types";
 import Hero from "./Hero";
-import Showcase from 'components/Showcase';
-import Overview from './Overview';
+import MediaShowcase from "components/Showcase/MediaShowcase";
+import FundersShowcase from "components/Showcase/FundersShowcase";
 
-interface Props {
-  media: ShowcaseItem[];
-  funders: ShowcaseItem[];
-}
+import Overview from "./Overview";
+import HeroBackground from "assets/Backgrounds/HeroBackground";
 
-const Home = ({ media, funders }: Props) => {
+const Home = () => {
   return (
     <Layout.Content>
-      <Hero />
-      <Overview />
-      <Showcase items={media} title="As seen in:" />
-      <Showcase items={funders} title="As seen in:" />
+      <HeroBackground className="absolute object-cover w-full" />
+      <Layout className="ameelio-layout w-full">
+        <Hero />
+        <MediaShowcase />
+        <Overview />
+        <FundersShowcase />
+      </Layout>
     </Layout.Content>
   );
 };
-
-
 
 export default Home;

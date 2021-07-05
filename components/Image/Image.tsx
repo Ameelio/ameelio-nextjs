@@ -9,9 +9,9 @@ interface Props {
 
 const Image = ({src, alt}: Props) => {
   return (
-    // <div className="image-container h-96">
-      <NextImage src={src} alt={alt} layout="responsive" className="image" />
-    // </div>
+    <div className="image-container">
+      <NextImage src={src} alt={alt} layout="fill" className="image" />
+    </div>
   );
 };
 

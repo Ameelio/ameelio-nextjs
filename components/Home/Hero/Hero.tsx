@@ -10,10 +10,9 @@ interface Props {}
 const Hero = (props: Props) => {
   return (
     <Row>
-      <HeroBackground className="absolute object-cover mw-screen" />
-      <Col span={8} className="ameelio-layout">
+      <Col span={10}>
         <Space size="large" direction="vertical">
-          <Typography.Text className="text-white text-5xl	text-bold">
+          <Typography.Text className="text-white text-5xl	font-bold">
             Transforming corrections with technology
           </Typography.Text>
 
@@ -26,9 +25,9 @@ const Hero = (props: Props) => {
 
           <Space direction="horizontal" className="mt-8">
             <Typography.Text className="text-white">I am:</Typography.Text>
-            <Button>A Loved One</Button>
-            <Button>Corrections Staff</Button>
-            <Button>An Educator</Button>
+            <Button variant="tertiary">A Loved One</Button>
+            <Button variant="tertiary">Corrections Staff</Button>
+            <Button variant="tertiary">An Educator</Button>
           </Space>
         </Space>
       </Col>
