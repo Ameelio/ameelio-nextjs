@@ -1,7 +1,7 @@
 @import "~antd/dist/antd.css";
 
 .ameelio-layout {
-    margin-left: 14%;
-    margin-right: 14%;
+    padding-left: 14%;
+    padding-right: 14%;
     margin-top: 80px;
 }

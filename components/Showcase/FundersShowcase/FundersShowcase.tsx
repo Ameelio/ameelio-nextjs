@@ -12,7 +12,7 @@ import ZendeskLogo from "assets/Funders/Zendesk";
 import { ShowcaseItem } from "types";
 import Showcase from "../Showcase";
 
-export const FUNDERS: ShowcaseItem[] = [
+const FUNDERS: ShowcaseItem[] = [
   { label: "Jack Dorsey" },
   { label: "Vinod Khosla" },
   { label: "Kevin P. Ryan" },

@@ -11,12 +11,12 @@ const Home = () => {
   return (
     <Layout.Content>
       <HeroBackground className="absolute object-cover w-full" />
-      <Layout className="ameelio-layout w-full">
-        <Hero />
-        <MediaShowcase />
-        <Overview />
-        <FundersShowcase />
-      </Layout>
+          <Layout className="ameelio-layout w-full">
+            <Hero />
+            <MediaShowcase />
+            <Overview />
+            <FundersShowcase />
+          </Layout>
     </Layout.Content>
   );
 };

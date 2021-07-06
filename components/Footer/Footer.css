@@ -9,16 +9,16 @@
     border-bottom: #0073eb 1px solid;
   }
   
-  .social-media-link {
+  /* .social-media-link {
+    text-decoration: none;
+    color: white;
+  } */
+  
+  /* .social-media-link:hover {
     text-decoration: none;
     color: white;
   }
-  
-  .social-media-link:hover {
-    text-decoration: none;
-    color: white;
-  }
-  
+   */
   .copyright-title {
     color: white;
   }

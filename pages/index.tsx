@@ -1,22 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Menu, Layout, Typography } from "antd";
+import { Menu, Layout } from "antd";
 import Footer from "../components/Footer";
-import Logo from "public/logo.svg";
-import Home from '../components/Home';
-import { InferGetStaticPropsType } from 'next'
-// import { FUNDERS, MEDIA } from "utils/constants";
-
-
-// export async function getStaticProps() {
-//   return {
-//     props: {
-//       media: MEDIA,
-//       funders: FUNDERS,
-//     },
-//   };
-// }
-//  media, funders }: InferGetStaticPropsType<typeof getStaticProps>
+import Home from "../components/Home";
 
 export default function HomePage() {
   return (
@@ -41,8 +26,9 @@ export default function HomePage() {
         </Menu>
       </Layout.Header>
       <Home />
-
-      <Layout.Footer><Footer /></Layout.Footer>
+      <Layout.Footer>
+        <Footer />
+      </Layout.Footer>
     </Layout>
   );
 }

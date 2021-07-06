@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Row, Col, Typography, Carousel } from "antd";
 import BasicCard from "components/Cards/BasicCard";
-import EducatorsMockup from 'assets/Mockups/Educators.png';
-import LovedOnesMockup from 'assets/Mockups/LovedOnes.png';
-import CorrectionsMockups from 'assets/Mockups/DOC.png';
-import Image from 'components/Image';
+import EducatorsMockup from "assets/Mockups/Educators.png";
+import LovedOnesMockup from "assets/Mockups/LovedOnes.png";
+import CorrectionsMockups from "assets/Mockups/DOC.png";
+import Image from "next/image";
 
 interface Props {}
 
@@ -31,21 +31,37 @@ const Overview = (props: Props) => {
 
   return (
     <div>
-      <Row>
-        <Col sm={24} md={10}>
+      <Row gutter={24}>
+        <Col sm={24} md={12}>
           <BasicCard
             tabList={tabList}
             onTabChange={(key) => setTab(key as TTab)}
+            className="h-72"
           >
-            <Typography.Text>{contentList[tab]}</Typography.Text>
+            <Typography.Text className="text-xl">
+              {contentList[tab]}
+            </Typography.Text>
           </BasicCard>
         </Col>
         <Col sm={24} md={8}>
-            <Carousel>
-                <Image src={LovedOnesMockup} alt="Mockup with loved ones products"/>
-                <Image src={EducatorsMockup} alt="Mockup with loved ones products"/>
-                <Image src={CorrectionsMockups} alt="Mockup with loved ones products"/>
-            </Carousel>
+          <Carousel>
+            {/* <div style={{ width: 344, height: 275, position: "relative" }}> */}
+            <Image
+              src={LovedOnesMockup}
+              alt="Mockup with loved ones products"
+              // layout="fill"
+              // objectFit="contain"
+            />
+            {/* </div> */}
+            <Image
+              src={EducatorsMockup}
+              alt="Mockup with loved ones products"
+            />
+            <Image
+              src={CorrectionsMockups}
+              alt="Mockup with loved ones products"
+            />
+          </Carousel>
         </Col>
       </Row>
       <Row></Row>
