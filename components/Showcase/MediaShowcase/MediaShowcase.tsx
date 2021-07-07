@@ -8,7 +8,8 @@ import BusinessInsider from "assets/Media/BusinessInsider";
 import Wapo from "assets/Media/Wapo";
 import FastCompany from "assets/Media/FastCompany";
 import { ShowcaseItem } from "types";
-import Showcase from '../Showcase';
+import Showcase from "../Showcase";
+import PaddedLayout from "components/Layout/PaddedLayout";
 
 const MEDIA: ShowcaseItem[] = [
   {
@@ -44,7 +45,11 @@ const MEDIA: ShowcaseItem[] = [
 ];
 
 const MediaShowcase = () => {
-  return <Showcase items={MEDIA} title="As seen in..." />;
+  return (
+    <PaddedLayout>
+      <Showcase items={MEDIA} title="As seen in..." />;
+    </PaddedLayout>
+  );
 };
 
 export default MediaShowcase;

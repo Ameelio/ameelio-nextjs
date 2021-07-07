@@ -17,20 +17,19 @@ const Showcase = ({
   itemClassName,
   className,
 }: Props) => {
-  console.log(items);
   return (
-    <div className={`${className} flex flex-col align-center justify-center`}>
-      <Typography.Text className={titleClassName || "text-xl"}>
+    <div className={`${className} flex flex-col text-center`}>
+      <Typography.Title level={3} className={titleClassName || "text-xl"}>
         {title}
-      </Typography.Text>
-      <Row justify="center">
+      </Typography.Title>
+      <Row justify="center" className="flex"> 
         {items.map((item) => {
           const [lastName, ...firstNames] = item.label.split(" ").reverse();
 
           return (
             <Col
               key={item.label}
-              className={`${itemClassName} h-16 mt-8 flex justify-center ${
+              className={`${itemClassName} h-16 mt-16 flex justify-center ${
                 item.link ? "cursor-pointer" : ""
               }}`}
               xs={8}

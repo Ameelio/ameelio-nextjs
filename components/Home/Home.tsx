@@ -6,17 +6,17 @@ import FundersShowcase from "components/Showcase/FundersShowcase";
 
 import Overview from "./Overview";
 import HeroBackground from "assets/Backgrounds/HeroBackground";
+import PartnerShowcase from "components/Showcase/PartnerShowcase";
 
 const Home = () => {
   return (
     <Layout.Content>
-      <HeroBackground className="absolute object-cover w-full" />
-          <Layout className="ameelio-layout w-full">
-            <Hero />
-            <MediaShowcase />
-            <Overview />
-            <FundersShowcase />
-          </Layout>
+      <HeroBackground className="absolute object-cover w-screen" />
+      <Hero />
+      <MediaShowcase />
+      <Overview />
+      <PartnerShowcase />
+      <FundersShowcase />
     </Layout.Content>
   );
 };

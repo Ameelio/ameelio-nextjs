@@ -8,8 +8,8 @@ interface Props {
 
 const MetricCard = ({ metric, label }: Props) => {
   return (
-    <div className="shadow-lg flex flex-col align-center rounded-sm">
-      <Typography.Title level={1} className="text-blue-700">{metric}</Typography.Title>
+    <div className="flex flex-col align-center text-center">
+      <Typography.Text className="text-blue-700 text-5xl">{metric}</Typography.Text>
       <Typography.Text>{label}</Typography.Text>
     </div>
   );

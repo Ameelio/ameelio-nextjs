@@ -11,6 +11,7 @@ import TrueVenturesLogo from "assets/Funders/TrueVentures";
 import ZendeskLogo from "assets/Funders/Zendesk";
 import { ShowcaseItem } from "types";
 import Showcase from "../Showcase";
+import PaddedLayout from "components/Layout/PaddedLayout";
 
 const FUNDERS: ShowcaseItem[] = [
   { label: "Jack Dorsey" },
@@ -30,6 +31,10 @@ const FUNDERS: ShowcaseItem[] = [
   { label: "Paige Henchen" },
 ];
 
-const FundersShowcase = () => <Showcase items={FUNDERS} title="Funders" />;
+const FundersShowcase = () => (
+  <PaddedLayout>
+    <Showcase items={FUNDERS} title="Funders" />;
+  </PaddedLayout>
+);
 
 export default FundersShowcase;

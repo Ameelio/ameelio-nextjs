@@ -5,6 +5,8 @@ import EducatorsMockup from "assets/Mockups/Educators.png";
 import LovedOnesMockup from "assets/Mockups/LovedOnes.png";
 import CorrectionsMockups from "assets/Mockups/DOC.png";
 import Image from "next/image";
+import MetricCard from "components/Cards/MetricCard";
+import PaddedLayout from "components/Layout/PaddedLayout";
 
 interface Props {}
 
@@ -21,16 +23,23 @@ const tabList: { key: TTab; tab: string }[] = [
   },
 ];
 
-const contentList: Record<TTab, string> = {
+const CONTENT_LIST: Record<TTab, string> = {
   what: "We build free-to-use communications and education technology to create a more humane and rehabilitative corrections system.",
   why: "95% of incarcerated people return to society. It is imperative that we connect our future neighbors to vital resources beforehand, empowering them to chart their own paths toward successful entry from day one. ",
 };
+
+const METRIC_CARD_ITEMS = [
+  { label: "Lives impacted", metric: "240K+" },
+  { label: "Happy users", metric: "124K+" },
+  { label: "Facilities served", metric: "3,000+" },
+  { label: "Messages sent", metric: "710K+" },
+];
 
 const Overview = (props: Props) => {
   const [tab, setTab] = useState<TTab>("what");
 
   return (
-    <div>
+    <PaddedLayout className="space-y-16">
       <Row gutter={24}>
         <Col sm={24} md={12}>
           <BasicCard
@@ -39,7 +48,7 @@ const Overview = (props: Props) => {
             className="h-72"
           >
             <Typography.Text className="text-xl">
-              {contentList[tab]}
+              {CONTENT_LIST[tab]}
             </Typography.Text>
           </BasicCard>
         </Col>
@@ -64,8 +73,14 @@ const Overview = (props: Props) => {
           </Carousel>
         </Col>
       </Row>
-      <Row></Row>
-    </div>
+      <Row justify="space-between">
+        {METRIC_CARD_ITEMS.map((item) => (
+          <Col span={4} key={item.label}>
+            <MetricCard metric={item.metric} label={item.label} />
+          </Col>
+        ))}
+      </Row>
+    </PaddedLayout>
   );
 };
 

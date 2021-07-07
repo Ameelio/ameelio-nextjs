@@ -3,3 +3,7 @@ export interface ShowcaseItem {
     asset?: JSX.Element;
     link?: string;
 }
+export interface MetricItem {
+    metric: string;
+    label: string;
+}
