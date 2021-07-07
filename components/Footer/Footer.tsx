@@ -3,7 +3,7 @@ import React from "react";
 import {FacebookFilled, InstagramFilled, GithubFilled, TwitterSquareFilled} from '@ant-design/icons';
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-blue-700 w-full p-5 md-flex-row">
+    <div className="flex flex-col w-full p-5 md-flex-row">
       <div className="flex flex-col">
         <span className="font-light text-white mb-3 ">Network</span>
         <a className="mb-2 text-white" href="https://twitter.com/teamameelio">

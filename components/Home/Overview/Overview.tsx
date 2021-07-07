@@ -7,6 +7,7 @@ import CorrectionsMockups from "assets/Mockups/DOC.png";
 import Image from "next/image";
 import MetricCard from "components/Cards/MetricCard";
 import PaddedLayout from "components/Layout/PaddedLayout";
+import OverviewBackground from "assets/Backgrounds/OverviewBackground";
 
 interface Props {}
 
@@ -39,48 +40,48 @@ const Overview = (props: Props) => {
   const [tab, setTab] = useState<TTab>("what");
 
   return (
-    <PaddedLayout className="space-y-16">
-      <Row gutter={24}>
-        <Col sm={24} md={12}>
-          <BasicCard
-            tabList={tabList}
-            onTabChange={(key) => setTab(key as TTab)}
-            className="h-72"
-          >
-            <Typography.Text className="text-xl">
-              {CONTENT_LIST[tab]}
-            </Typography.Text>
-          </BasicCard>
-        </Col>
-        <Col sm={24} md={8}>
-          <Carousel>
-            {/* <div style={{ width: 344, height: 275, position: "relative" }}> */}
-            <Image
-              src={LovedOnesMockup}
-              alt="Mockup with loved ones products"
-              // layout="fill"
-              // objectFit="contain"
-            />
-            {/* </div> */}
-            <Image
-              src={EducatorsMockup}
-              alt="Mockup with loved ones products"
-            />
-            <Image
-              src={CorrectionsMockups}
-              alt="Mockup with loved ones products"
-            />
-          </Carousel>
-        </Col>
-      </Row>
-      <Row justify="space-between">
-        {METRIC_CARD_ITEMS.map((item) => (
-          <Col span={4} key={item.label}>
-            <MetricCard metric={item.metric} label={item.label} />
+    <div>
+      <OverviewBackground className="absolute right-0 w-7/12" />
+
+      <PaddedLayout  disableVerticalSpacing>
+        <Row gutter={24} className="mt-16">
+          <Col sm={24} md={14}>
+            <BasicCard
+              tabList={tabList}
+              onTabChange={(key) => setTab(key as TTab)}
+              className="h-72"
+            >
+              <Typography.Text className="text-xl">
+                {CONTENT_LIST[tab]}
+              </Typography.Text>
+            </BasicCard>
           </Col>
-        ))}
-      </Row>
-    </PaddedLayout>
+          <Col sm={24} md={8}>
+            <Carousel>
+              <Image
+                src={LovedOnesMockup}
+                alt="Mockup with loved ones products"
+              />
+              <Image
+                src={EducatorsMockup}
+                alt="Mockup with loved ones products"
+              />
+              <Image
+                src={CorrectionsMockups}
+                alt="Mockup with loved ones products"
+              />
+            </Carousel>
+          </Col>
+        </Row>
+        <Row justify="space-between" className="mt-24">
+          {METRIC_CARD_ITEMS.map((item) => (
+            <Col span={4} key={item.label}>
+              <MetricCard metric={item.metric} label={item.label} />
+            </Col>
+          ))}
+        </Row>
+      </PaddedLayout>
+    </div>
   );
 };
 

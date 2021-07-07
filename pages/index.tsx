@@ -26,7 +26,7 @@ export default function HomePage() {
         </Menu>
       </Layout.Header>
       <Home />
-      <Layout.Footer>
+      <Layout.Footer className="bg-blue-700">
         <Footer />
       </Layout.Footer>
     </Layout>
