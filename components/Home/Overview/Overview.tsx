@@ -43,7 +43,7 @@ const Overview = (props: Props) => {
     <div>
       <OverviewBackground className="absolute right-0 w-7/12" />
 
-      <PaddedLayout  disableVerticalSpacing>
+      <PaddedLayout disableVerticalSpacing>
         <Row gutter={24} className="mt-16">
           <Col sm={24} md={14}>
             <BasicCard
@@ -61,15 +61,26 @@ const Overview = (props: Props) => {
               <Image
                 src={LovedOnesMockup}
                 alt="Mockup with loved ones products"
+                width="344"
+                height="275"
               />
               <Image
                 src={EducatorsMockup}
                 alt="Mockup with loved ones products"
+                width="244"
+                height="145"
               />
-              <Image
-                src={CorrectionsMockups}
-                alt="Mockup with loved ones products"
-              />
+              <div
+                style={{  position: "relative" }}
+              >
+                <Image
+                  src={CorrectionsMockups}
+                  alt="Mockup with loved ones products"
+                  width="242"
+                  height="145"
+                  className="object-contain"
+                />
+              </div>
             </Carousel>
           </Col>
         </Row>

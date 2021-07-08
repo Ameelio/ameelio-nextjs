@@ -1,11 +1,9 @@
 import Head from "next/head";
-import { Menu, Layout } from "antd";
-import Footer from "../components/Footer";
 import Home from "../components/Home";
-
+import BaseTemplate from "components/BaseTemplate";
 export default function HomePage() {
   return (
-    <Layout>
+    <BaseTemplate>
       <Head>
         <title>Ameelio: Transforming corrections with technology</title>
         <meta
@@ -14,21 +12,7 @@ export default function HomePage() {
           key="title"
         />
       </Head>
-      <Layout.Header className="bg-white">
-        <Menu mode="horizontal">
-          <Menu.SubMenu title="Platform">
-            <Menu.Item>Connect</Menu.Item>
-            <Menu.Item>Letters</Menu.Item>
-          </Menu.SubMenu>
-
-          <Menu.Item>Who We Serve</Menu.Item>
-          <Menu.Item>Our Story</Menu.Item>
-        </Menu>
-      </Layout.Header>
       <Home />
-      <Layout.Footer className="bg-blue-700">
-        <Footer />
-      </Layout.Footer>
-    </Layout>
+    </BaseTemplate>
   );
 }

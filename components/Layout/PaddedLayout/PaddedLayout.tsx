@@ -5,7 +5,7 @@ interface Props extends LayoutProps {
   disableVerticalSpacing?: boolean;
 }
 
-const PaddedLayout = (props: Props) => {
+const PaddedLayout = ({disableVerticalSpacing, ...props}: Props) => {
   return (
     <Layout
       {...props}
@@ -13,7 +13,7 @@ const PaddedLayout = (props: Props) => {
       style={{
         marginLeft: "14%",
         marginRight: "14%",
-        marginTop: props.disableVerticalSpacing ? undefined : 80,
+        marginTop: disableVerticalSpacing ? undefined : 80,
       }}
     >
       {props.children}
