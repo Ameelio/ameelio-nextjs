@@ -10,10 +10,10 @@ interface Props {}
 
 
 
-const TestimonialList = (props: Props) => {
+const ReviewWall = (props: Props) => {
   return (
     <div className="flex flex-col">
-      <Typography.Title level={3} className="text-center">
+      <Typography.Title level={3} className="text-center z-10">
         Recent Reviews
       </Typography.Title>
       <div
@@ -35,4 +35,4 @@ const TestimonialList = (props: Props) => {
   );
 };
 
-export default TestimonialList;
+export default ReviewWall;

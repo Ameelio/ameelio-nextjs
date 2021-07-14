@@ -9,7 +9,7 @@ import HeroBackground from "assets/Backgrounds/HeroBackground";
 import PartnerShowcase from "components/Showcase/PartnerShowcase";
 import Testimonial from "components/Testimonial";
 import MikeGass from "assets/Testimonials/MikeGass.png";
-import TestimonialList from "./TestimonialList";
+import ReviewWall from "./ReviewWall";
 const MIKE = {
   quote: "Ameelio's video calling platform is so easy to use — it's going to save us COs an abundance of time, make our work more efficient, and get our prison population reconnected with their families at no cost.",
   author: "Mike Gass",
@@ -22,7 +22,7 @@ const Home = () => {
       <HeroBackground className="absolute object-cover w-screen" />
       <Hero />
       <MediaShowcase />
-      <TestimonialList />
+      <ReviewWall />
       <Overview />
       <Testimonial {...MIKE} />
       <PartnerShowcase />

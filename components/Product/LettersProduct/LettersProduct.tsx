@@ -5,7 +5,7 @@ import BasicCard from "components/Cards/BasicCard";
 import { Typography } from "antd";
 import LettersHighlight from "./LettersHighlight";
 import Testimonial from "components/Testimonial";
-import TestimonialList from "components/Home/TestimonialList";
+import ReviewWall from "components/Home/ReviewWall";
 const REVIEWER = {
   quote: "This is the most amazing app I have ever used. I am blessed to have a service like this when I can't afford to mail my son a letter plus they send pics with ur letter. Thank u Ameelio.",
   author: "Terri McGillivray",
@@ -20,7 +20,7 @@ const LettersProduct = (props: Props) => {
     <div>
       <LettersHero />
       {/* <Testimonial {...REVIEWER}/> */}
-      <TestimonialList />
+      <ReviewWall />
       <LettersHighlight />
       <PaddedLayout>
         <BasicCard>

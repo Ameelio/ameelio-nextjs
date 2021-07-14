@@ -6,11 +6,12 @@ import Logo from "assets/Logos/Logo";
 import Button from "components/Button";
 interface Props {
   children: ReactNode | ReactNode[];
+  className?: string;
 }
 
-const BaseTemplate = ({ children }: Props) => {
+const BaseTemplate = ({ children, className }: Props) => {
   return (
-    <Layout>
+    <Layout className={className}>
       <Layout.Header className="bg-white flex items-center justify-between">
         <Link href="/" passHref={true}>
           <a><Logo /></a>
@@ -26,12 +27,19 @@ const BaseTemplate = ({ children }: Props) => {
           </Menu.SubMenu>
 
           <Menu.Item key="who-serve">Who We Serve</Menu.Item>
-          <Menu.Item key="our-story">Our Story</Menu.Item>
+          <Menu.SubMenu title="Our Story" key="our-story">
+            <Menu.Item key="our-story-problem">
+              <Link href="/our-story/problem">The Problem</Link>
+            </Menu.Item>
+            <Menu.Item key="our-story-team">
+              <Link href="/our-story/team">Team</Link>
+            </Menu.Item>
+          </Menu.SubMenu>
         </Menu>
         <Button variant="primary">Donate</Button>
       </Layout.Header>
       {children}
-      <Layout.Footer className="bg-blue-700 mt-16">
+      <Layout.Footer className="bg-blue-700 mt-16  z-10">
         <Footer />
       </Layout.Footer>
     </Layout>

@@ -47,7 +47,7 @@ const LettersHero = () => {
   return (
     <div>
       <ProductHeroBackground className="absolute object-cover w-screen z-0" />
-      <PaddedLayout className="z-100">
+      <PaddedLayout className="z-10">
         <div className="grid md:grid-cols-2 grid-cols-1">
           <div className="flex flex-col space-y-4">
             <div className="flex space-x-2">
@@ -76,7 +76,7 @@ const LettersHero = () => {
             </div>
           </div>
         </div>
-        <BasicCard className="my-16 space-y-4 p-4 z-100">
+        <BasicCard className="my-16 space-y-4 p-4 z-10">
           <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-8">
             {CONNECT_VALUE_PROPS.map((value) => (
               <ValuePropsItem key={value.title} {...value} />
