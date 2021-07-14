@@ -5,7 +5,7 @@ interface Props extends CardProps {
 
 const BasicCard = (props: Props) => {
     return (
-        <Card style={{ borderRadius: 4 }} {...props}/> 
+        <Card {...props} className={`${props.className} rounded`} /> 
     )
 }
 

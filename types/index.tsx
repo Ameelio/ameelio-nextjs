@@ -19,3 +19,10 @@ export interface TStepByStepItem {
     title: string;
     desc: string;
 }
+
+export interface TValuePropItem {
+    icon: JSX.Element;
+    title: string;
+    body: string;
+    cta?: { text: string, link: string}
+}

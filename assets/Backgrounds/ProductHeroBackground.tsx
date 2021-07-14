@@ -4,30 +4,43 @@ interface Props {
 
 const ProductHeroBackground = ({ className }: Props) => (
   <svg
-    viewBox="0 0 1263 740"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
+  className={className}
+  viewBox="0 0 1134 730"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <mask
+    id="mask0"
+    mask-type="alpha"
+    maskUnits="userSpaceOnUse"
+    x="0"
+    y="0"
+    width="1134"
+    height="730"
   >
+    <rect width="1134" height="730" fill="#C4C4C4" />
+  </mask>
+  <g mask="url(#mask0)">
     <path
       opacity="0.9"
-      d="M678 282.5C467.661 348.588 59 379.5 33.5 496.5L0 740C9.5 740 54.6838 717.249 188.5 710.5C476 696 562.402 600.134 815 581.5C937 572.5 1135 542 1245 525.5L1262.25 0C1245.09 16.917 1170 129 1059 155.5C930.119 186.269 843.5 230.5 678 282.5Z"
+      d="M586 277.5C375.661 343.588 -33 374.5 -58.5 491.5L-92 735C-82.5 735 -37.3162 712.249 96.5 705.5C384 691 470.402 595.134 723 576.5C845 567.5 1043 537 1153 520.5L1170.25 -5C1153.09 11.917 1078 124 967 150.5C838.119 181.269 751.5 225.5 586 277.5Z"
       fill="url(#paint0_linear)"
     />
-    <defs>
-      <linearGradient
-        id="paint0_linear"
-        x1="1166.08"
-        y1="673.225"
-        x2="940.532"
-        y2="-157.729"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop offset="0.161458" stopColor="#F66262" />
-        <stop offset="0.932292" stopColor="#3577DA" />
-      </linearGradient>
-    </defs>
-  </svg>
+  </g>
+  <defs>
+    <linearGradient
+      id="paint0_linear"
+      x1="1074.08"
+      y1="668.225"
+      x2="848.532"
+      y2="-162.729"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0.161458" stopColor="#F66262" />
+      <stop offset="0.932292" stopColor="#3577DA" />
+    </linearGradient>
+  </defs>
+</svg>
 );
 
 export default ProductHeroBackground;

@@ -8,6 +8,7 @@ import Image from "next/image";
 import MetricCard from "components/Cards/MetricCard";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import OverviewBackground from "assets/Backgrounds/OverviewBackground";
+import { METRIC_CARD_ITEMS } from "utils/constants";
 
 interface Props {}
 
@@ -28,13 +29,6 @@ const CONTENT_LIST: Record<TTab, string> = {
   what: "We build free-to-use communications and education technology to create a more humane and rehabilitative corrections system.",
   why: "95% of incarcerated people return to society. It is imperative that we connect our future neighbors to vital resources beforehand, empowering them to chart their own paths toward successful entry from day one. ",
 };
-
-const METRIC_CARD_ITEMS = [
-  { label: "Lives impacted", metric: "240K+" },
-  { label: "Happy users", metric: "124K+" },
-  { label: "Facilities served", metric: "3,000+" },
-  { label: "Messages sent", metric: "710K+" },
-];
 
 const Overview = (props: Props) => {
   const [tab, setTab] = useState<TTab>("what");
@@ -72,27 +66,25 @@ const Overview = (props: Props) => {
                 height="145"
                 layout="responsive"
               />
-              {/* <div
-                style={{  position: "relative" }}
-              > */}
-                <Image
-                  src={CorrectionsMockups}
-                  alt="Mockup with loved ones products"
-                  width="242"
-                  height="145"
-                  layout="responsive"
-                />
-              {/* </div> */}
+              <Image
+                src={CorrectionsMockups}
+                alt="Mockup with loved ones products"
+                width="242"
+                height="145"
+                layout="responsive"
+              />
             </Carousel>
           </Col>
         </Row>
-        <Row justify="space-between" className="mt-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 mt-8">
           {METRIC_CARD_ITEMS.map((item) => (
-            <Col span={4} key={item.label}>
-              <MetricCard metric={item.metric} label={item.label} />
-            </Col>
+            <MetricCard
+              key={item.label}
+              metric={item.metric}
+              label={item.label}
+            />
           ))}
-        </Row>
+        </div>
       </PaddedLayout>
     </div>
   );

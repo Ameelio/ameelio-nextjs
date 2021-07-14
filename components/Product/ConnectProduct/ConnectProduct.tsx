@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import Hero from "components/Product/Hero";
+import ConnectHero from "components/Product/Hero/ConnectHero";
 import React from "react";
 import Testimonial from "components/Testimonial";
 import Judy from "assets/Testimonials/Judy.png";
@@ -17,7 +17,7 @@ interface Props {}
 const ConnectProduct = (props: Props) => {
   return (
     <Layout.Content>
-      <Hero type="connect" />
+      <ConnectHero/>
       <Testimonial {...JUDY} />
       <StepByStep />
     </Layout.Content>

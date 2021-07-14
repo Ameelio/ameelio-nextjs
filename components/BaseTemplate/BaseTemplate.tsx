@@ -2,7 +2,8 @@ import React, { ReactNode } from "react";
 import { Menu, Layout } from "antd";
 import Footer from "components/Footer";
 import Link from "next/link";
-
+import Logo from "assets/Logos/Logo";
+import Button from "components/Button";
 interface Props {
   children: ReactNode | ReactNode[];
 }
@@ -10,7 +11,10 @@ interface Props {
 const BaseTemplate = ({ children }: Props) => {
   return (
     <Layout>
-      <Layout.Header className="bg-white">
+      <Layout.Header className="bg-white flex items-center justify-between">
+        <Link href="/" passHref={true}>
+          <a><Logo /></a>
+        </Link>
         <Menu mode="horizontal">
           <Menu.SubMenu title="Platform" key="products">
             <Menu.Item key="products-connect">
@@ -24,9 +28,10 @@ const BaseTemplate = ({ children }: Props) => {
           <Menu.Item key="who-serve">Who We Serve</Menu.Item>
           <Menu.Item key="our-story">Our Story</Menu.Item>
         </Menu>
+        <Button variant="primary">Donate</Button>
       </Layout.Header>
       {children}
-      <Layout.Footer className="bg-blue-700">
+      <Layout.Footer className="bg-blue-700 mt-16">
         <Footer />
       </Layout.Footer>
     </Layout>

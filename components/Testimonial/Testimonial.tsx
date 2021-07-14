@@ -5,8 +5,6 @@ import { TTestimonialItem } from "types";
 import Image from "next/image";
 
 interface Props extends TTestimonialItem {
-  // imageWidth: number;
-  // imageHeight: number;
   occupation: string;
 }
 
@@ -15,8 +13,7 @@ const Testimonial = ({
   quote,
   author,
   occupation,
-}: // imageWidth,
-// imageHeight,
+}:
 Props) => {
   return (
     <div className="bg-blue-700">
