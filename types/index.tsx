@@ -1,15 +1,21 @@
-export interface ShowcaseItem {
+export interface TShowcaseItem {
     label: string;
     asset?: JSX.Element;
     link?: string;
 }
-export interface MetricItem {
+export interface TMetricItem {
     metric: string;
     label: string;
 }
 
-export interface TestimonialItem {
+export interface TTestimonialItem {
     imageSrc: StaticImageData | string;
     quote: string;
     author: string;
+}
+
+export interface TStepByStepItem {
+    index: number;
+    title: string;
+    desc: string;
 }

@@ -1,9 +1,10 @@
 import React from "react";
-import { TestimonialItem } from "types";
-import { Rate } from "antd";
+import { TTestimonialItem } from "types";
+import { Rate, Typography } from "antd";
 import BasicCard from "components/Cards/BasicCard";
 import Image from "next/image";
-interface Props extends TestimonialItem {}
+import Paragraph from "antd/lib/skeleton/Paragraph";
+interface Props extends TTestimonialItem {}
 
 const Review = ({ author, quote, imageSrc }: Props) => {
   return (
@@ -22,7 +23,9 @@ const Review = ({ author, quote, imageSrc }: Props) => {
           </div>
         </div>
 
-        <p className="mt-4">{quote}</p>
+        <Typography.Paragraph className="mt-4" ellipsis={{ rows: 3 }}>
+          {quote}
+        </Typography.Paragraph>
       </div>
     </BasicCard>
   );

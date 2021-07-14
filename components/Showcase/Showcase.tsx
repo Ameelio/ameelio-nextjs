@@ -1,10 +1,10 @@
 import { Typography, Row, Col } from "antd";
 import React from "react";
-import { ShowcaseItem } from "types";
+import { TShowcaseItem } from "types";
 
 interface Props {
   title: string;
-  items: ShowcaseItem[];
+  items: TShowcaseItem[];
   titleClassName?: string;
   itemClassName?: string;
   className?: string;

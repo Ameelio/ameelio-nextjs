@@ -9,11 +9,11 @@ import NYCTLogo from "assets/Funders/NYCT";
 import ABELogo from "assets/Funders/ABE";
 import TrueVenturesLogo from "assets/Funders/TrueVentures";
 import ZendeskLogo from "assets/Funders/Zendesk";
-import { ShowcaseItem } from "types";
+import { TShowcaseItem } from "types";
 import Showcase from "../Showcase";
 import PaddedLayout from "components/Layout/PaddedLayout";
 
-const FUNDERS: ShowcaseItem[] = [
+const FUNDERS: TShowcaseItem[] = [
   { label: "Jack Dorsey" },
   { label: "Vinod Khosla" },
   { label: "Kevin P. Ryan" },

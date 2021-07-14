@@ -63,24 +63,26 @@ const Overview = (props: Props) => {
                 alt="Mockup with loved ones products"
                 width="344"
                 height="275"
+                layout="responsive"
               />
               <Image
                 src={EducatorsMockup}
                 alt="Mockup with loved ones products"
                 width="244"
                 height="145"
+                layout="responsive"
               />
-              <div
+              {/* <div
                 style={{  position: "relative" }}
-              >
+              > */}
                 <Image
                   src={CorrectionsMockups}
                   alt="Mockup with loved ones products"
                   width="242"
                   height="145"
-                  className="object-contain"
+                  layout="responsive"
                 />
-              </div>
+              {/* </div> */}
             </Carousel>
           </Col>
         </Row>

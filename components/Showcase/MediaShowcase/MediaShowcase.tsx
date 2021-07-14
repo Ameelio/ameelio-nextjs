@@ -7,11 +7,11 @@ import TechCrunch from "assets/Media/Techcrunch";
 import BusinessInsider from "assets/Media/BusinessInsider";
 import Wapo from "assets/Media/Wapo";
 import FastCompany from "assets/Media/FastCompany";
-import { ShowcaseItem } from "types";
+import { TShowcaseItem } from "types";
 import Showcase from "../Showcase";
 import PaddedLayout from "components/Layout/PaddedLayout";
 
-const MEDIA: ShowcaseItem[] = [
+const MEDIA: TShowcaseItem[] = [
   {
     asset: <Bloomberg />,
     link: "https://www.forbes.com/sites/angelauyeung/2020/09/21/the-prison-communications-nonprofit-backed-by-twitters-jack-dorsey-and-former-google-chief-eric-schmidt/#139203bc3b92",

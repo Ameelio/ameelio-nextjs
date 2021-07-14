@@ -1,6 +1,6 @@
 import PaddedLayout from "components/Layout/PaddedLayout";
 import React from "react";
-import { ShowcaseItem } from "types";
+import { TShowcaseItem } from "types";
 import FWDLogo from "assets/Partners/FWD";
 import UChicagoLogo from "assets/Partners/UChicago";
 import EricHolderLogo from "assets/Partners/EricHolder";
@@ -9,7 +9,7 @@ import Showcase from "../Showcase";
 
 interface Props {}
 
-const PARTNERS: ShowcaseItem[] = [
+const PARTNERS: TShowcaseItem[] = [
   { label: "UChicago", asset: <UChicagoLogo /> },
   { label: "TMP", asset: <TMPLogo /> },
   { label: "Eric Holder", asset: <EricHolderLogo /> },

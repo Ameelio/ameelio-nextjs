@@ -11,12 +11,14 @@ const Button = ({variant, ...props}: Props) => {
         switch(variant) {
             case 'primary':
                 return 'text-white bg-black';
+            case 'secondary':
+                return 'text-black border-black bg-white'
             case 'tertiary':
                 return 'border-white bg-transparent text-white';
         }
     }
     return (
-        <AntdButton {...props} className={`${getButtonStyle()} rounded-sm`} />
+        <AntdButton {...props} className={`${getButtonStyle()} rounded-sm ${props.className}`} />
     )
 }
 
