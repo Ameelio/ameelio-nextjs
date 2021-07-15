@@ -32,19 +32,19 @@ export const CONNECT_VALUE_PROPS: TValuePropItem[] = [
 
   export const CORRECTIONS_VALUE_PROPS: TValuePropItem[] = [
     {
-      icon: <VideoCameraOutlined className="text-4xl" />,
+      icon: <VideoCameraOutlined className="text-4xl text-blue-400" />,
       title: "Modern techology solutions",
       body: "We can upgrade your facility to modern tech solutions that priortize the safety, security, and efficency you require",
       cta: { text: "Get in touch", link: "" },
     },
     {
-      icon: <StarOutlined className="text-4xl" />,
+      icon: <StarOutlined className="text-4xl text-blue-400" />,
       title: "Reduce recidivism",
       body: "Our products reduce recidvism by connecting people in prison to educational, legal, and emotional support for free",
       cta: { text: "Sign the petition", link: "" },
     },
     {
-      icon: <LikeOutlined className="text-4xl" />,
+      icon: <LikeOutlined className="text-4xl text-blue-400" />,
       title: "Develop solutions together.",
       body: "Collaboration is essential to building a rehabilitative system. We work with partners to improve access to family contact and social services within their agency's requirements",
     },

@@ -20,8 +20,8 @@ const ValuePropCard = ({ valueProps, cta, meta, className }: Props) => {
           <ValuePropsItem key={value.title} {...value} />
         ))}
       </div>
-      <div className="flex justify-center">
-        {cta && <Button variant="primary">{cta.text}</Button>}
+      <div className="flex flex-col items-center">
+        {cta && <Button className="mt-4" variant="primary">{cta.text}</Button>}
         {meta}
       </div>
     </BasicCard>

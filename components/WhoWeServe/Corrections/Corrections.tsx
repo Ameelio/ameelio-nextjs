@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import ConnectHero from "components/Product/Hero/ConnectHero";
+import CorrectionsHero from "./CorrectionsHero";
 import React from "react";
 import Testimonial from "components/Testimonial";
 import StepByStep from "components/Product/StepByStep";
@@ -15,7 +15,7 @@ interface Props {}
 const Corrections = (props: Props) => {
   return (
     <Layout.Content>
-      <ConnectHero />
+      <CorrectionsHero />
 
       <Testimonial {...MIKE} />
 
@@ -38,7 +38,7 @@ const Corrections = (props: Props) => {
          <ProductCard
           type="letters"
           desc="Guarantee tamper-proof mail by approving our contactless printing and shipping solution"
-          cta='download'
+          cta={{ text: "Get in Touch", link: "" }}
           image={
             <div style={{ width: 240, height: 300}}>
               <Image

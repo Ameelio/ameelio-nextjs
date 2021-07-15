@@ -18,7 +18,7 @@ const Button = ({variant, ...props}: Props) => {
         }
     }
     return (
-        <AntdButton {...props} className={`${getButtonStyle()} rounded-sm ${props.className}`} />
+        <AntdButton {...props} className={`${getButtonStyle()} rounded ${props.className}`} />
     )
 }
 

@@ -1,6 +1,7 @@
 import { Typography, Row, Col } from "antd";
 import React from "react";
 import { TShowcaseItem } from "types";
+import { H2 } from "components/Typography";
 
 export interface ShowCaseProps {
   title: string;
@@ -19,21 +20,21 @@ const Showcase = ({
 }: ShowCaseProps) => {
   return (
     <div className={`${className} flex flex-col text-center`}>
-      <h3 className={titleClassName || "text-2xl font-bold"}>
-        {title}
-      </h3>
-      <Row justify="center" className="flex"> 
+      <H2 className={`text-2xl font-bold ${titleClassName}`}>{title}</H2>
+      {/* <div className="grid grid-cols-3 md:grid-cols-4 justify-center align-center"> */}
+      <div className="flex justify-center flex-wrap	 ">
+
         {items.map((item) => {
           const [lastName, ...firstNames] = item.label.split(" ").reverse();
 
           return (
-            <Col
+            <div
               key={item.label}
-              className={`${itemClassName} h-16 mt-16 flex justify-center ${
+              className={`${itemClassName} w-1/3 mt-16 flex justify-center ${
                 item.link ? "cursor-pointer" : ""
               }}`}
-              xs={8}
-              md={6}
+              // xs={8}
+              // md={6}
               onClick={() => item.link && window.open(item.link, "_blank")}
             >
               {item.asset ? (
@@ -48,10 +49,10 @@ const Showcase = ({
                   </Typography.Text>
                 </div>
               )}
-            </Col>
+            </div>
           );
         })}
-      </Row>
+      </div>
     </div>
   );
 };

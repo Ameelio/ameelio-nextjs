@@ -12,26 +12,6 @@ import ConnectChat from "assets/Mockups/Connect/ConnectChat.png";
 import ConnectInCall from "assets/Mockups/Connect/ConnectInCall.png";
 import { CONNECT_VALUE_PROPS } from "utils/constants";
 import ValuePropCard from "components/Cards/ValuePropCard";
-// const CONNECT_VALUE_PROPS: TValuePropItem[] = [
-//   {
-//     icon: <CheckCircleTwoTone className="text-4xl" />,
-//     title: "Connect is for anybody, including educators and social services.",
-//     body: "Connect supplements in-person instruction by connecting students with on-campus resources, such as personalized tutoring, librarian access, disability support services, financial aid, and academic counseling.",
-//     cta: { text: "Get in touch", link: "" },
-//   },
-//   {
-//     icon: <HeartTwoTone className="text-4xl" />,
-//     title: "Connect is completely free for families.",
-//     body: "You can download Connect from the app store on any Apple or Android device. Once you create your profile, you can add your loved one and request to be added as their contact. Once corrections officials approve you as a visitor, you will then be able to schedule video calls.",
-//     cta: { text: "Sign the petition", link: "" },
-//   },
-//   {
-//     icon: <SafetyCertificateTwoTone className="text-4xl" />,
-//     title: "Connect meets corrections industry security standards.",
-//     body: "Use Connect on any device, including devices that your agency may already own.",
-//     cta: { text: "Request a demo", link: "" },
-//   },
-// ];
 
 const Hero = () => {
   return (
