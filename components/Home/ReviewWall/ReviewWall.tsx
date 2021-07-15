@@ -11,7 +11,7 @@ interface Props {}
 
 const ReviewWall = (props: Props) => {
   return (
-    <div className="flex flex-col ml-4">
+    <div className="flex flex-col ml-4 mt-16">
       <Typography.Title level={3} className="text-center z-10">
         Recent Reviews
       </Typography.Title>

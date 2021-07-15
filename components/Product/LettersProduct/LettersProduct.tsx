@@ -2,16 +2,9 @@ import React from "react";
 import LettersHero from "components/Product/Hero/LettersHero";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import BasicCard from "components/Cards/BasicCard";
-import { Typography } from "antd";
 import LettersHighlight from "./LettersHighlight";
-import Testimonial from "components/Testimonial";
 import ReviewWall from "components/Home/ReviewWall";
-const REVIEWER = {
-  quote: "This is the most amazing app I have ever used. I am blessed to have a service like this when I can't afford to mail my son a letter plus they send pics with ur letter. Thank u Ameelio.",
-  author: "Terri McGillivray",
-  occupation: 'Google Play Reviewer',
-  imageSrc: "https://play-lh.googleusercontent.com/a-/AOh14GjlDWltnohiSWtilyf_otxyp1bySeTnG0edBs0XLOE=w96-h96-n-rw",
-}
+import { H2 } from "components/Typography";
 
 interface Props {}
 
@@ -19,14 +12,13 @@ const LettersProduct = (props: Props) => {
   return (
     <div>
       <LettersHero />
-      {/* <Testimonial {...REVIEWER}/> */}
       <ReviewWall />
       <LettersHighlight />
       <PaddedLayout>
         <BasicCard>
-          <Typography.Title className="text-center">
+          <H2 className="text-center">
             How we&apos;re free
-          </Typography.Title>
+          </H2>
           <p className="text-center mt-4">
             You can find the Ameelio: Photo Cards to Prison app on the app store
             of any Apple or Android device. On our app, you can send two free

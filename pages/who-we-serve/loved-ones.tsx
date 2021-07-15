@@ -1,6 +1,6 @@
 import React from "react";
 import BaseTemplate from "components/BaseTemplate";
-import Corrections from "components/WhoWeServe/Corrections";
+import LovedOnes from "components/WhoWeServe/LovedOnes";
 
 import Head from "next/head";
 
@@ -11,14 +11,14 @@ const connect = (props: Props) => {
   return (
     <BaseTemplate>
       <Head>
-        <title>Ameelio for DOCs: Securely streamline your workflow with easy-to-use communication and management tools</title>
+        <title>Ameelio for Loved Ones: Stay in touch with your loved ones for free</title>
         <meta
           property="og:title"
           content="Ameelio Connect: Free prison communication platform"
           key="title"
         />
       </Head>
-      <Corrections />
+      <LovedOnes />
     </BaseTemplate>
   );
 };
