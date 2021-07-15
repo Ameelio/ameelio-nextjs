@@ -3,12 +3,12 @@ import React from "react";
 // Media
 import Bloomberg from "assets/Media/Bloomberg";
 import Forbes from "assets/Media/Forbes";
-import TechCrunch from "assets/Media/Techcrunch";
+import TechCrunch from "assets/Media/TechCrunch";
 import BusinessInsider from "assets/Media/BusinessInsider";
 import Wapo from "assets/Media/Wapo";
 import FastCompany from "assets/Media/FastCompany";
 import { TShowcaseItem } from "types";
-import Showcase from "../Showcase";
+import Showcase, { ShowCaseProps } from "../Showcase";
 import PaddedLayout from "components/Layout/PaddedLayout";
 
 const MEDIA: TShowcaseItem[] = [
@@ -44,10 +44,13 @@ const MEDIA: TShowcaseItem[] = [
   },
 ];
 
-const MediaShowcase = () => {
+interface Props extends Omit<ShowCaseProps, 'items'> {
+  className?: string;
+}
+const MediaShowcase = ({className, ...props}: Props) => {
   return (
-    <PaddedLayout>
-      <Showcase items={MEDIA} title="As seen in..." />;
+    <PaddedLayout className={className}>
+      <Showcase items={MEDIA} {...props} />;
     </PaddedLayout>
   );
 };

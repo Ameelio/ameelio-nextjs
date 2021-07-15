@@ -12,7 +12,7 @@ interface Props {
 const BaseTemplate = ({ children, className }: Props) => {
   return (
     <Layout className={className}>
-      <Layout.Header className="bg-white flex items-center justify-between">
+      {/* <Layout.Header className="bg-white flex items-center justify-between">
         <Link href="/" passHref={true}>
           <a><Logo /></a>
         </Link>
@@ -36,12 +36,9 @@ const BaseTemplate = ({ children, className }: Props) => {
             </Menu.Item>
           </Menu.SubMenu>
         </Menu>
-        <Button variant="primary">Donate</Button>
-      </Layout.Header>
+      </Layout.Header> */}
       {children}
-      <Layout.Footer className="bg-blue-700 mt-16  z-10">
         <Footer />
-      </Layout.Footer>
     </Layout>
   );
 };

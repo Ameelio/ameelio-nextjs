@@ -8,10 +8,15 @@ export interface TMetricItem {
     label: string;
 }
 
-export interface TTestimonialItem {
-    imageSrc: StaticImageData | string;
+export interface TReviewItem {
+    imageSrc: string;
     quote: string;
     author: string;
+}
+
+
+export interface TTestimonialItem extends TReviewItem {
+    occupation: string;
 }
 
 export interface TStepByStepItem {
@@ -25,4 +30,9 @@ export interface TValuePropItem {
     title: string;
     body: string;
     cta?: { text: string, link: string}
+}
+
+export interface TCallToAction {
+    link: string;
+    text: string;
 }

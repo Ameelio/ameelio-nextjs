@@ -1,11 +1,6 @@
 @import "~antd/dist/antd.css";
 
-.ameelio-layout {
-    padding-left: 14%;
-    padding-right: 14%;
-    margin-top: 80px;
-}
 
 body {
-    background-color: white;
+  background-color: #ebfafb !important;
 }

@@ -1,17 +1,22 @@
 import React from "react";
 // import "./Footer.css";
-import {FacebookFilled, InstagramFilled, GithubFilled, TwitterSquareFilled} from '@ant-design/icons';
+import {
+  FacebookFilled,
+  InstagramFilled,
+  GithubFilled,
+  TwitterSquareFilled,
+} from "@ant-design/icons";
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full p-5 md:flex-row">
-      <div className="flex flex-col">
+    <div className="flex flex-col w-full p-5 md:flex-row bg-blue-700 mt-16 z-50">
+      <div className="flex flex-col gap-y-2">
         <span className="font-light text-white mb-3 ">Network</span>
-        <a className="mb-2 text-white" href="https://twitter.com/teamameelio">
+        <a className="text-white" href="https://twitter.com/teamameelio">
           <TwitterSquareFilled color="white" />
           <span className="ml-3">Twitter</span>
         </a>
         <a
-          className="mb-2 text-white"
+          className="text-white"
           href="https://www.instagram.com/teamameelio/"
         >
           <InstagramFilled color="text-white" />
@@ -19,14 +24,14 @@ const Footer = () => {
         </a>
 
         <a
-          className="mb-2 text-white"
+          className="text-white"
           href="https://www.facebook.com/teamameelio/"
         >
           <FacebookFilled className="text-white" />
           <span className="ml-3">Facebook</span>
         </a>
 
-        <a className="mb-2 text-white" href="https://github.com/Ameelio">
+        <a className="text-white" href="https://github.com/Ameelio">
           <GithubFilled color="white" />
           <span className="ml-3">GitHub</span>
         </a>

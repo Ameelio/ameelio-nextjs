@@ -1,6 +1,6 @@
-import { TTestimonialItem } from "types";
+import { TReviewItem } from "types";
 
-export const REVIEWS: TTestimonialItem[] = [
+export const REVIEWS: TReviewItem[] = [
     {
       imageSrc:
         "https://play-lh.googleusercontent.com/a-/AOh14GhsCZepsoqWp81BKAmINHG_qId7qfAv9Bcxz7Xy=w96-h96-n-rw",

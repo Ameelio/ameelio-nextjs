@@ -1,19 +1,20 @@
 import React from "react";
-import { Space, Typography, Row, Col } from "antd";
+import { div, Typography, Row, Col } from "antd";
 import Button from "components/Button";
-import Mockup from "public/Mockup.png";
 import Image from "next/image";
 import PaddedLayout from "components/Layout/PaddedLayout";
+import ConnectChat from "assets/Mockups/Connect/ConnectChat.png";
+import ConnectDOCDashboard from "assets/Mockups/Connect/ConnectDOCDashboard.png";
 
 interface Props {}
 
 const Hero = (props: Props) => {
   return (
-    <div>
+    <div className="z-10">
       <PaddedLayout>
-        <Row>
-          <Col span={14}>
-            <Space size="large" direction="vertical">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <div className="flex flex-col gap-y-4">
               <Typography.Text className="text-white text-5xl	font-bold">
                 Transforming America’s correctional system with technology
               </Typography.Text>
@@ -26,18 +27,23 @@ const Hero = (props: Props) => {
                 successful reentry from day one.
               </Typography.Text>
 
-              <Space direction="horizontal" className="mt-8">
+              <div className="flex flex-row mt-8 gap-x-4">
                 <Typography.Text className="text-white">I am:</Typography.Text>
                 <Button variant="tertiary">A Loved One</Button>
                 <Button variant="tertiary">Corrections Staff</Button>
                 <Button variant="tertiary">An Educator</Button>
-              </Space>
-            </Space>
-          </Col>
-          {/* <Col span={8}> */}
-          {/* <Image src={Mockup} width={574} height={337} alt="Ameelio mockups" /> */}
-          {/* </Col> */}
-        </Row>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2">
+            <div className="mt-8">
+              <Image src={ConnectChat} layout="responsive" alt="Connect call"/>
+            </div>
+            <div className="mt-8">
+              <Image src={ConnectDOCDashboard} layout="responsive" alt="Connect call"/>
+            </div>
+          </div>
+        </div>
       </PaddedLayout>
     </div>
   );

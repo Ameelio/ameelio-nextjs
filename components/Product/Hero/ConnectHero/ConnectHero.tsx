@@ -5,44 +5,33 @@ import ConnectTablet from "assets/Mockups/Connect/ConnectTablet.png";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import React from "react";
 import Button from "components/Button";
-// import PersonIcon from "assets/Icons/PersonIcon";
-// import DonationIcon from "assets/Icons/DonationIcon";
-// import SecurityIcon from "assets/Icons/SecurityIcon";
-import Link from "next/link";
 import Image from "next/image";
 import { Typography } from "antd";
-import BasicCard from "components/Cards/BasicCard";
 import ConnectDash from "assets/Mockups/Connect/ConnectDash.png";
 import ConnectChat from "assets/Mockups/Connect/ConnectChat.png";
 import ConnectInCall from "assets/Mockups/Connect/ConnectInCall.png";
-import {
-  SafetyCertificateTwoTone,
-  HeartTwoTone,
-  CheckCircleTwoTone,
-} from "@ant-design/icons";
-import { TValuePropItem } from "types";
-import ValuePropsItem from "components/Product/ValuePropsItem";
-
-const CONNECT_VALUE_PROPS: TValuePropItem[] = [
-  {
-    icon: <CheckCircleTwoTone className="text-4xl" />,
-    title: "Connect is for anybody, including educators and social services.",
-    body: "Connect supplements in-person instruction by connecting students with on-campus resources, such as personalized tutoring, librarian access, disability support services, financial aid, and academic counseling.",
-    cta: { text: "Get in touch", link: "" },
-  },
-  {
-    icon: <HeartTwoTone className="text-4xl" />,
-    title: "Connect is completely free for families.",
-    body: "You can download Connect from the app store on any Apple or Android device. Once you create your profile, you can add your loved one and request to be added as their contact. Once corrections officials approve you as a visitor, you will then be able to schedule video calls.",
-    cta: { text: "Sign the petition", link: "" },
-  },
-  {
-    icon: <SafetyCertificateTwoTone className="text-4xl" />,
-    title: "Connect meets corrections industry security standards.",
-    body: "Use Connect on any device, including devices that your agency may already own.",
-    cta: { text: "Request a demo", link: "" },
-  },
-];
+import { CONNECT_VALUE_PROPS } from "utils/constants";
+import ValuePropCard from "components/Cards/ValuePropCard";
+// const CONNECT_VALUE_PROPS: TValuePropItem[] = [
+//   {
+//     icon: <CheckCircleTwoTone className="text-4xl" />,
+//     title: "Connect is for anybody, including educators and social services.",
+//     body: "Connect supplements in-person instruction by connecting students with on-campus resources, such as personalized tutoring, librarian access, disability support services, financial aid, and academic counseling.",
+//     cta: { text: "Get in touch", link: "" },
+//   },
+//   {
+//     icon: <HeartTwoTone className="text-4xl" />,
+//     title: "Connect is completely free for families.",
+//     body: "You can download Connect from the app store on any Apple or Android device. Once you create your profile, you can add your loved one and request to be added as their contact. Once corrections officials approve you as a visitor, you will then be able to schedule video calls.",
+//     cta: { text: "Sign the petition", link: "" },
+//   },
+//   {
+//     icon: <SafetyCertificateTwoTone className="text-4xl" />,
+//     title: "Connect meets corrections industry security standards.",
+//     body: "Use Connect on any device, including devices that your agency may already own.",
+//     cta: { text: "Request a demo", link: "" },
+//   },
+// ];
 
 const Hero = () => {
   return (
@@ -82,20 +71,16 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <BasicCard className="my-16 space-y-4 p-4 z-10">
-          <div className="flex flex-col space-y-8">
-            {CONNECT_VALUE_PROPS.map((value) => (
-              <ValuePropsItem key={value.title} {...value} />
-            ))}
-          </div>
-          <div className="flex justify-center">
+        <ValuePropCard
+          valueProps={CONNECT_VALUE_PROPS}
+          meta={
             <Image
               src={ConnectTablet}
               alt="Connect tablet mockup"
               className="mx-auto"
             />
-          </div>
-        </BasicCard>
+          }
+        />
       </PaddedLayout>
     </div>
   );

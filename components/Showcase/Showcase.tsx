@@ -2,7 +2,7 @@ import { Typography, Row, Col } from "antd";
 import React from "react";
 import { TShowcaseItem } from "types";
 
-interface Props {
+export interface ShowCaseProps {
   title: string;
   items: TShowcaseItem[];
   titleClassName?: string;
@@ -16,12 +16,12 @@ const Showcase = ({
   titleClassName,
   itemClassName,
   className,
-}: Props) => {
+}: ShowCaseProps) => {
   return (
     <div className={`${className} flex flex-col text-center`}>
-      <Typography.Title level={3} className={titleClassName || "text-xl"}>
+      <h3 className={titleClassName || "text-2xl font-bold"}>
         {title}
-      </Typography.Title>
+      </h3>
       <Row justify="center" className="flex"> 
         {items.map((item) => {
           const [lastName, ...firstNames] = item.label.split(" ").reverse();

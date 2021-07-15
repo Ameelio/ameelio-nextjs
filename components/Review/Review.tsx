@@ -1,10 +1,10 @@
 import React from "react";
-import { TTestimonialItem } from "types";
+import { TReviewItem } from "types";
 import { Rate, Typography } from "antd";
 import BasicCard from "components/Cards/BasicCard";
 import Image from "next/image";
 import Paragraph from "antd/lib/skeleton/Paragraph";
-interface Props extends TTestimonialItem {}
+interface Props extends TReviewItem {}
 
 const Review = ({ author, quote, imageSrc }: Props) => {
   return (

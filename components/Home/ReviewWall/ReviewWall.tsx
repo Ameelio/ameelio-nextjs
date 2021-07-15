@@ -1,7 +1,6 @@
 import PaddedLayout from "components/Layout/PaddedLayout";
 import React from "react";
 import Review from "components/Review";
-import { TTestimonialItem } from "types";
 import { Typography } from "antd";
 import AppStoreButtonDuo from "components/Button/AppStoreButtonDuo";
 import { REVIEWS } from "utils/constants";
@@ -12,7 +11,7 @@ interface Props {}
 
 const ReviewWall = (props: Props) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ml-4">
       <Typography.Title level={3} className="text-center z-10">
         Recent Reviews
       </Typography.Title>

@@ -23,7 +23,7 @@ const ProblemPage = (props: Props) => {
           key="title"
         />
       </Head>
-      <OurStoryBackground className="absolute top-1/4 object-contain md:object-cover z-0" />
+      <OurStoryBackground className="absolute top-1/4 object-cover z-0" />
       <PaddedLayout>
         <BasicCard>
           <div className="inline-block">
@@ -31,7 +31,7 @@ const ProblemPage = (props: Props) => {
               Understanding the problem of prison telecommunication
             </Typography.Title>
             <div >
-              <div className="float-left" >
+              <div className="md:float-left" >
                 <Image src={PayPhone}  width={220} height={336} alt="Pay phone" />
               </div>
               <Typography.Paragraph>
