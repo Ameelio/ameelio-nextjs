@@ -10,6 +10,7 @@ import ReviewWall from "components/Home/ReviewWall";
 import BasicCard from "components/Cards/BasicCard";
 import { H2 } from "components/Typography";
 import ConnectInCall from "assets/Mockups/Connect/ConnectInCall.png";
+import { LINKS } from "utils/constants";
 
 interface Props {}
 
@@ -23,7 +24,7 @@ const LovedOnes = (props: Props) => {
         <ProductCard
           type="connect"
           desc="Become a registered visitor, schedule a call, and join free video meetings with your incarcerated loved one"
-          cta={{ text: "Sign the Petition", link: "" }}
+          cta={{ text: "Sign the Petition", link: LINKS.PETITION }}
           image={
             <div style={{ width: 240, height: 300 }}>
               <Image

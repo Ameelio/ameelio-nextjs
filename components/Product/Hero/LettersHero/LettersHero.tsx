@@ -3,9 +3,8 @@ import LettersWordmark from "assets/Wordmarks/LettersWordmark";
 import LettersLogo from "assets/Logos/LettersLogo";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { Typography } from "antd";
+import { H1 } from "components/Typography";
 import BasicCard from "components/Cards/BasicCard";
 import LettersGiftShop from "assets/Mockups/Letters/LettersGiftShop.png";
 import LettersSuccess from "assets/Mockups/Letters/LettersSuccess.png";
@@ -49,18 +48,18 @@ const LettersHero = () => {
       <ProductHeroBackground className="absolute object-cover w-screen z-0" />
       <PaddedLayout className="z-10">
         <div className="grid md:grid-cols-2 grid-cols-1">
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 z-10">
             <div className="flex space-x-2">
               <LettersWordmark />
               <LettersLogo />
             </div>
-            <Typography.Title>
+            <H1>
               Send letters and photo cards to your incarcerated loved ones every
               week, at no cost to you
-            </Typography.Title>
+            </H1>
             <AppStoreButtonDuo />
           </div>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 mt-8 md:mt-0">
             <div className="mb-8">
               <Image
                 src={LettersPacket}

@@ -9,7 +9,7 @@ interface Props {
 const AppStoreButtonDuo = ({ className }: Props) => {
   return (
     <div
-      className={`flex md:flex-row flex-col justify-content-center align-items-center gap-y-4 ${className}`}
+      className={`flex justify-content-center align-items-center gap-y-4 ${className}`}
     >
       <div
         className="mr-4"

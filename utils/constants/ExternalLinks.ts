@@ -3,4 +3,6 @@ export enum LINKS {
   CONNECT_DEMO = "https://ameelio.typeform.com/to/EEDXqNWS",
   LMS_DEMO = "https://ameelio.typeform.com/to/F9KZOfvW",
   HIRING = 'https://ameelio.breezy.hr/',
+  PETITION  = 'https://www.change.org/ameelioconnect',
+
 }

@@ -3,44 +3,50 @@ interface Props {
 }
 
 const ProductHeroBackground = ({ className }: Props) => (
+  <div className="absolute  w-screen overflow-hidden z-0 right-0">
+
   <svg
-  className={className}
-  viewBox="0 0 1134 730"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <mask
-    id="mask0"
-    mask-type="alpha"
-    maskUnits="userSpaceOnUse"
-    x="0"
-    y="0"
-    width="1134"
+    width="1474"
     height="730"
+    viewBox="0 0 1474 730"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="object-cover"
   >
-    <rect width="1134" height="730" fill="#C4C4C4" />
-  </mask>
-  <g mask="url(#mask0)">
-    <path
-      opacity="0.9"
-      d="M586 277.5C375.661 343.588 -33 374.5 -58.5 491.5L-92 735C-82.5 735 -37.3162 712.249 96.5 705.5C384 691 470.402 595.134 723 576.5C845 567.5 1043 537 1153 520.5L1170.25 -5C1153.09 11.917 1078 124 967 150.5C838.119 181.269 751.5 225.5 586 277.5Z"
-      fill="url(#paint0_linear)"
-    />
-  </g>
-  <defs>
-    <linearGradient
-      id="paint0_linear"
-      x1="1074.08"
-      y1="668.225"
-      x2="848.532"
-      y2="-162.729"
-      gradientUnits="userSpaceOnUse"
+    <mask
+      id="mask0"
+      mask-type="alpha"
+      maskUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="1474"
+      height="730"
     >
-      <stop offset="0.161458" stopColor="#F66262" />
-      <stop offset="0.932292" stopColor="#3577DA" />
-    </linearGradient>
-  </defs>
-</svg>
+      <rect width="1474" height="730" fill="#C4C4C4" />
+    </mask>
+    <g mask="url(#mask0)">
+      <path
+        opacity="0.9"
+        d="M761.697 277.5C488.294 343.588 -42.8941 374.5 -76.0397 491.5L-119.584 735C-107.235 735 -48.5045 712.249 125.433 705.5C499.132 691 611.44 595.134 939.772 576.5C1098.35 567.5 1355.72 537 1498.7 520.5L1521.11 -5C1498.81 11.917 1401.21 124 1256.93 150.5C1089.41 181.269 976.817 225.5 761.697 277.5Z"
+        fill="url(#paint0_linear)"
+      />
+    </g>
+    <defs>
+      <linearGradient
+        id="paint0_linear"
+        x1="1396.12"
+        y1="668.225"
+        x2="1217.59"
+        y2="-186.671"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0.161458" stopColor="#F66262" />
+        <stop offset="0.932292" stopColor="#3577DA" />
+      </linearGradient>
+    </defs>
+  </svg>
+  </div>
+
 );
 
 export default ProductHeroBackground;

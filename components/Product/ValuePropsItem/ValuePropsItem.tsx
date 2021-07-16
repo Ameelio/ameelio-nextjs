@@ -1,6 +1,6 @@
 import React from "react";
 import { TValuePropItem } from "types";
-import Link from 'next/link';
+import Link from 'components/Link';
 
 interface Props extends TValuePropItem {}
 
@@ -11,7 +11,7 @@ const ValuePropsItem = ({title, cta, body, icon}: Props) => {
       <div className="flex flex-col space-y-2">
         <span className="font-bold">{title}</span>
         <p>{body}</p>
-        {cta && <Link href={cta.link}>{cta.text}</Link>}
+        {cta && <Link text={cta.text} href={cta.link} external/>}
       </div>
     </div>
   );

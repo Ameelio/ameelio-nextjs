@@ -16,7 +16,8 @@ import ValuePropCard from "components/Cards/ValuePropCard";
 const Hero = () => {
   return (
     <div>
-      <ProductHeroBackground className="absolute object-cover w-screen z-0" />
+      <ProductHeroBackground />
+
       <PaddedLayout className="z-10">
         <div className="grid md:grid-cols-2 grid-cols-1">
           <div className="flex flex-col space-y-4">
@@ -35,7 +36,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 mt-8">
             <div className="mb-8">
               <Image
                 src={ConnectDash}

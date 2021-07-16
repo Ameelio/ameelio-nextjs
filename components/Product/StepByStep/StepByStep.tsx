@@ -5,6 +5,7 @@ import { TStepByStepItem } from "types";
 import StepByStepItem from "./StepByStepItem";
 import { Typography } from "antd";
 import PaddedLayout from "components/Layout/PaddedLayout";
+import {  H3 } from "components/Typography";
 
 interface Props {}
 
@@ -40,19 +41,17 @@ const StepByStep = (props: Props) => {
   return (
     <PaddedLayout>
       <BasicCard>
-        <div className="flex flex-col items-center">
-          <Typography.Title level={3}>
-            What to expect when you request a demo
-          </Typography.Title>
+        <div className="flex flex-col items-center gap-y-4">
+          <H3 className="text-center">What to expect when you request a demo</H3>
           <p className="text-center">
             If you’re a DOC or jail interested in getting Connect to your state,
             here’s what to expect when you request a demo.
           </p>
-          <Button variant="primary" className="mt-4">
+          <Button variant="primary">
             Request a Demo
           </Button>
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 md:mt-16 mt-8 mx-16">
+        <div className="grid md:grid-cols-3 grid-cols-1 md:mt-16 mt-8 md:mx-16">
           {STEPS.map((step) => (
             <StepByStepItem key={step.index} {...step} />
           ))}

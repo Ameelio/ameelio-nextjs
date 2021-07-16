@@ -23,7 +23,7 @@ const ProductCard = ({ image, type, desc, cta }: Props) => {
           {type === "letters" ? <LettersWordmark /> : <ConnectWordmark />}
           <p className="text-center md:text-start">{desc}</p>
           {cta === "download" ? (
-            <AppStoreButtonDuo />
+            <AppStoreButtonDuo className="flex flex-col"/>
           ) : (
             <Button variant="primary">{cta.text}</Button>
           )}

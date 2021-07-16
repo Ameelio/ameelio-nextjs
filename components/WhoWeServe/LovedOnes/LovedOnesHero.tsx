@@ -25,7 +25,7 @@ const LovedOnesHero = () => {
               <Button variant="secondary">How we&apos;re free</Button>
             </div>
           </div>
-          <div>
+          <div className="m-w-screen">
             <Image
               src={ConnectDOCDashFramed}
               alt="Connect DOC dashboard"
