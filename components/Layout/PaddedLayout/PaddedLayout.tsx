@@ -10,11 +10,11 @@ interface Props extends LayoutProps {
 const PaddedLayout = ({disableVerticalSpacing, children, className}: Props) => {
   return (
     <div
-      className={`${className}`}
+      className={`${disableVerticalSpacing ? '' : 'my-4 py-8'} ${className}`}
       style={{
         marginLeft: "14%",
         marginRight: "14%",
-        marginTop: disableVerticalSpacing ? undefined : 80,
+        // marginTop: disableVerticalSpacing ? undefined : 80,
       }}
     >
       {children}

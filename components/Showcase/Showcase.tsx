@@ -20,7 +20,7 @@ const Showcase = ({
   return (
     <div className={`${className} flex flex-col text-center`}>
       <H2 className={`text-2xl font-bold ${titleClassName}`}>{title}</H2>
-      <div className="flex justify-center flex-wrap	 ">
+      <div className="flex justify-center flex-wrap	gap-x-16 md:gap-x-0 ">
 
         {items.map((item) => {
           const [lastName, ...firstNames] = item.label.split(" ").reverse();
@@ -31,8 +31,6 @@ const Showcase = ({
               className={`${itemClassName} w-1/3 mt-16 flex justify-center ${
                 item.link ? "cursor-pointer" : ""
               }}`}
-              // xs={8}
-              // md={6}
               onClick={() => item.link && window.open(item.link, "_blank")}
             >
               {item.asset ? (
@@ -40,7 +38,7 @@ const Showcase = ({
               ) : (
                 <div className="flex flex-col align-center w-full text-center">
                   <span className="text-gray-400 text-2xl">
-                    {firstNames}
+                    {firstNames.join(' ')}
                   </span>
                   <span className="font-bold text-gray-400 text-3xl">
                     {lastName}
@@ -48,11 +46,11 @@ const Showcase = ({
                 </div>
               )}
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Showcase;

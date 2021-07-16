@@ -5,24 +5,33 @@ import MediaShowcase from "components/Showcase/MediaShowcase";
 import FundersShowcase from "components/Showcase/FundersShowcase";
 
 import Overview from "./Overview";
-import HeroBackground from "assets/Backgrounds/HeroBackground";
 import PartnerShowcase from "components/Showcase/PartnerShowcase";
 import Testimonial from "components/Testimonial";
 import ReviewWall from "./ReviewWall";
 import { MIKE } from "utils/constants/Testimonials";
+import HeroBackground from "assets/Backgrounds/HeroBackground";
+import Image from "next/image";
+import HeroMockup from "assets/Mockups/HeroMockup.png";
 
 const Home = () => {
   return (
-    <Layout.Content>
-      <HeroBackground className="absolute object-cover w-screen z-0" />
-      <Hero />
-      <MediaShowcase />
+    <div>
+      {/* <HeroBackground className="absolute object-cover w-screen z-0" /> */}
+
+      <div className="absolute h-screen w-screen overflow-hidden z-0">
+        <HeroBackground className="object-cover" />
+      </div>
+
+      <div className="md:mt-24">
+        <Hero />
+      </div>
+      <MediaShowcase title="In the Press" />
       <ReviewWall />
       <Overview />
       <Testimonial {...MIKE} />
       <PartnerShowcase />
       <FundersShowcase />
-    </Layout.Content>
+    </div>
   );
 };
 

@@ -29,8 +29,6 @@ const LovedOnes = (props: Props) => {
               <Image
                 src={ConnectInCall}
                 alt="Correctional staff using Connect"
-                width="240"
-                height="480"
               />
             </div>
           }

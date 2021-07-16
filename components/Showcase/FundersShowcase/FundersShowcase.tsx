@@ -33,7 +33,7 @@ const FUNDERS: TShowcaseItem[] = [
 
 const FundersShowcase = () => (
   <PaddedLayout>
-    <Showcase items={FUNDERS} title="Funders" />;
+    <Showcase items={FUNDERS} title="Funders" />
   </PaddedLayout>
 );
 

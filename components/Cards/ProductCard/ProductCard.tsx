@@ -6,7 +6,7 @@ import Link from "components/Link";
 import { TCallToAction } from "types";
 import AppStoreButtonDuo from "components/Button/AppStoreButtonDuo";
 import Button from "components/Button";
-import { ArrowRightOutlined} from '@ant-design/icons'
+import { ArrowRightOutlined } from "@ant-design/icons";
 interface Props {
   image: React.ReactNode;
   type: "letters" | "connect";
@@ -17,18 +17,17 @@ interface Props {
 const ProductCard = ({ image, type, desc, cta }: Props) => {
   return (
     <BasicCard>
-      <div className="grid md:grid-cols-3 items-center overflow-hidden	">
-
+      <div className="flex flex-col-reverse   md:grid md:grid-cols-3 items-center overflow-hidden">
         {image}
-        <div className="flex flex-col items-center md:items-start md:justify-center gap-y-8">
+        <div className="flex flex-col items-center md:items-start md:justify-center gap-y-8 md:col-span-2	">
           {type === "letters" ? <LettersWordmark /> : <ConnectWordmark />}
-          <p>{desc}</p>
+          <p className="text-center md:text-start">{desc}</p>
           {cta === "download" ? (
             <AppStoreButtonDuo />
           ) : (
             <Button variant="primary">{cta.text}</Button>
           )}
-          <Link href={`/products/${type}`} text="Learn more"/>
+          <Link href={`/products/${type}`} text="Learn more" />
         </div>
       </div>
     </BasicCard>

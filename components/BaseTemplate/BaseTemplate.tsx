@@ -12,11 +12,12 @@ interface Props {
 const BaseTemplate = ({ children, className }: Props) => {
   return (
     <Layout className={className}>
-      {/* <Layout.Header className="bg-white flex items-center justify-between">
+      {/* <div></div> */}
+      <Layout.Header className="bg-white flex items-center justify-between">
         <Link href="/" passHref={true}>
           <a><Logo /></a>
         </Link>
-        <Menu mode="horizontal">
+        {/* <Menu mode="horizontal">
           <Menu.SubMenu title="Platform" key="products">
             <Menu.Item key="products-connect">
               <Link href="/products/connect">Connect</Link>
@@ -35,8 +36,8 @@ const BaseTemplate = ({ children, className }: Props) => {
               <Link href="/our-story/team">Team</Link>
             </Menu.Item>
           </Menu.SubMenu>
-        </Menu>
-      </Layout.Header> */}
+        </Menu> */}
+      </Layout.Header>
       {children}
         <Footer />
     </Layout>

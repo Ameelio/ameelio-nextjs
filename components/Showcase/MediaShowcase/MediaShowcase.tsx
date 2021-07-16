@@ -50,7 +50,7 @@ interface Props extends Omit<ShowCaseProps, 'items'> {
 const MediaShowcase = ({className, ...props}: Props) => {
   return (
     <PaddedLayout className={className}>
-      <Showcase items={MEDIA} {...props} />;
+      <Showcase items={MEDIA} {...props} />
     </PaddedLayout>
   );
 };

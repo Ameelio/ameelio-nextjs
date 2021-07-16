@@ -44,8 +44,6 @@ const Corrections = (props: Props) => {
               <Image
                 src={LettersTracking}
                 alt="Correctional staff using Connect"
-                width="240"
-                height="480"
               />
             </div>
           }

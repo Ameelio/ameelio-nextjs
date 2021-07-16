@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Row, Col, Typography, Carousel } from "antd";
+import { Typography, Carousel } from "antd";
 import BasicCard from "components/Cards/BasicCard";
-import EducatorsMockup from "assets/Mockups/Educators.png";
-import LovedOnesMockup from "assets/Mockups/LovedOnes.png";
-import CorrectionsMockups from "assets/Mockups/DOC.png";
+import LMSMockup from "assets/Mockups/LMS.png";
+import ConnectDOCDashboard from "assets/Mockups/Connect/ConnectDOCDashboard.png";
+import ConnectInCall from "assets/Mockups/Connect/ConnectInCall.png";
 import Image from "next/image";
 import MetricCard from "components/Cards/MetricCard";
 import PaddedLayout from "components/Layout/PaddedLayout";
@@ -35,53 +35,51 @@ const Overview = (props: Props) => {
 
   return (
     <div>
-      <OverviewBackground className="absolute right-0 w-7/12" />
+      {/* <OverviewBackground className="absolute right-0 w-6/12 z-0" /> */}
 
-      <PaddedLayout disableVerticalSpacing>
-        <Row gutter={24} className="mt-16">
-          <Col sm={24} md={14}>
-            <BasicCard
-              tabList={tabList}
-              onTabChange={(key) => setTab(key as TTab)}
-              className="h-72"
-            >
-              <Typography.Text className="text-xl">
-                {CONTENT_LIST[tab]}
-              </Typography.Text>
-            </BasicCard>
-          </Col>
-          <Col sm={24} md={8}>
-            <Carousel>
+      <PaddedLayout>
+        <div className="grid md:grid-cols-2 gap-x-16">
+          {/* <Col sm={24} md={14}> */}
+          <BasicCard
+            tabList={tabList}
+            onTabChange={(key) => setTab(key as TTab)}
+            // className="h-72"
+          >
+            <Typography.Text className="text-xl">
+              {CONTENT_LIST[tab]}
+            </Typography.Text>
+          </BasicCard>
+          {/* </Col> */}
+          {/* <Col sm={24} md={8}> */}
+          <div>
+            <OverviewBackground className="absolute right-0 w-6/12 z-0" />
+
+            {/* <Carousel className="row-span-1">
               <Image
-                src={LovedOnesMockup}
-                alt="Mockup with loved ones products"
-                width="344"
-                height="275"
-                layout="responsive"
-              />
-              <Image
-                src={EducatorsMockup}
+                src={LMSMockup}
                 alt="Mockup with loved ones products"
                 width="244"
                 height="145"
                 layout="responsive"
               />
               <Image
-                src={CorrectionsMockups}
+                src={ConnectDOCDashboard}
                 alt="Mockup with loved ones products"
-                width="242"
-                height="145"
-                layout="responsive"
+                // width="242"
+                // height="145"
+                // layout="responsive"
               />
-            </Carousel>
-          </Col>
-        </Row>
+            </Carousel> */}
+          </div>
+          {/* </Col> */}
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 mt-8">
           {METRIC_CARD_ITEMS.map((item) => (
             <MetricCard
               key={item.label}
               metric={item.metric}
               label={item.label}
+              className="z-10"
             />
           ))}
         </div>

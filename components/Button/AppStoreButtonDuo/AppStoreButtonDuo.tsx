@@ -9,10 +9,11 @@ interface Props {
 const AppStoreButtonDuo = ({ className }: Props) => {
   return (
     <div
-      className={`flex md:flex-row flex-col justify-content-center align-items-center ${className}`}
+      className={`flex md:flex-row flex-col justify-content-center align-items-center gap-y-4 ${className}`}
     >
       <div
         className="mr-4"
+        style={{ width: 136}}
         onClick={() =>
           window.open(
             "https://apps.apple.com/us/app/ameelio/id1526489300",
