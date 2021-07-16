@@ -6,46 +6,28 @@ import {
   GithubFilled,
   TwitterSquareFilled,
 } from "@ant-design/icons";
+import LogoWhite from "assets/Logos/LogoWhite";
+import PaddedLayout from "components/Layout/PaddedLayout";
+import SocialMedia from "./SocialMedia";
+import CompanyFooter from './CompanyFooter';
+
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full p-5 md:flex-row bg-blue-700 mt-16 z-50">
-      <div className="flex flex-col gap-y-2">
-        <span className="font-light text-white mb-3 ">Network</span>
-        <a className="text-white" href="https://twitter.com/teamameelio">
-          <TwitterSquareFilled color="white" />
-          <span className="ml-3">Twitter</span>
-        </a>
-        <a
-          className="text-white"
-          href="https://www.instagram.com/teamameelio/"
-        >
-          <InstagramFilled color="text-white" />
-          <span className="ml-3">Instagram</span>
-        </a>
-
-        <a
-          className="text-white"
-          href="https://www.facebook.com/teamameelio/"
-        >
-          <FacebookFilled className="text-white" />
-          <span className="ml-3">Facebook</span>
-        </a>
-
-        <a className="text-white" href="https://github.com/Ameelio">
-          <GithubFilled color="white" />
-          <span className="ml-3">GitHub</span>
-        </a>
-      </div>
-      <div className="ml-auto flex flex-col md:pr-5 pt-5">
-        <h3 className="md:text-right text-white">Ameelio</h3>
-        <span className="md:text-right p5 text-white">
-          Contact us at team@ameelio.org
-        </span>
-        <span className="text-white mt-3">
-          © 2021 Ameelio. Ameelio Inc, EIN 84-1800611, is a registered nonprofit
-          501(c)(3) organization.
-        </span>
-      </div>
+    <div className="bg-blue-700 z-50">
+      <PaddedLayout className="flex flex-col md:flex-row gap-y-8 gap-x-24 ">
+        <SocialMedia />
+        <CompanyFooter/>
+        <div className="ml-auto flex flex-col md:items-end gap-y-2">
+          <LogoWhite />
+          <span className="mt-auto text-white opacity-50 md:text-right">
+            Copyright © 2021 Ameelio Inc. All Rights Reserved
+          </span>
+          <span className="text-white opacity-50 md:text-right">
+            Ameelio Inc, EIN 84-1800611, is a registered nonprofit 501(c)(3)
+            organization.
+          </span>
+        </div>
+      </PaddedLayout>
     </div>
   );
 };

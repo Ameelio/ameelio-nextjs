@@ -35,7 +35,7 @@ const Hero = ({className}: Props) => {
                 <Link passHref href="/who-we-serve/loved-ones">
                   <Button variant="tertiary">A Loved One</Button>
                 </Link>
-                <Link passHref href="/who-we-serve/loved-ones">
+                <Link passHref href="/who-we-serve/corrections">
                   <Button variant="tertiary">Corrections Staff</Button>
                 </Link>
                 {/* <Link><Button variant="tertiary">An Educator</Button></Link> */}

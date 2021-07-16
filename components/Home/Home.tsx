@@ -10,14 +10,10 @@ import Testimonial from "components/Testimonial";
 import ReviewWall from "./ReviewWall";
 import { MIKE } from "utils/constants/Testimonials";
 import HeroBackground from "assets/Backgrounds/HeroBackground";
-import Image from "next/image";
-import HeroMockup from "assets/Mockups/HeroMockup.png";
 
 const Home = () => {
   return (
     <div>
-      {/* <HeroBackground className="absolute object-cover w-screen z-0" /> */}
-
       <div className="absolute h-screen w-screen overflow-hidden z-0">
         <HeroBackground className="object-cover" />
       </div>

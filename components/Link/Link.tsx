@@ -5,13 +5,15 @@ import { ArrowRightOutlined } from "@ant-design/icons";
 interface Props {
   href: string;
   text: string;
+  className?: string;
+  external?: boolean;
 }
 
-const Link = ({ href, text}: Props) => {
+const Link = ({ href, text, className, external }: Props) => {
   return (
     <NextLink passHref href={href}>
-      <a className="font-medium">
-        {text} <ArrowRightOutlined />
+      <a className={className || "font-medium"}>
+        {text} {external && <ArrowRightOutlined />}
       </a>
     </NextLink>
   );
