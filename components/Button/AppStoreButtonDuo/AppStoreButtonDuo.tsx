@@ -13,7 +13,7 @@ const AppStoreButtonDuo = ({ className }: Props) => {
     >
       <div
         className="mr-4"
-        style={{ width: 136}}
+        style={{ width: 136, height: 40}}
         onClick={() =>
           window.open(
             "https://apps.apple.com/us/app/ameelio/id1526489300",

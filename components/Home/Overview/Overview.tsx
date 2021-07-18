@@ -34,7 +34,6 @@ const Overview = (props: Props) => {
 
   return (
     <div>
-
       <PaddedLayout>
         <div className="grid md:grid-cols-2 gap-x-16">
           <BasicCard
@@ -45,20 +44,16 @@ const Overview = (props: Props) => {
               {CONTENT_LIST[tab]}
             </Typography.Text>
           </BasicCard>
-      
-          <div>
+
+          <div className="hidden md:block  max-w-full">
             <OverviewBackground className="absolute right-0 w-6/12 z-0" />
 
-            <Carousel className="row-span-1">
-              <Image
-                src={LMSMockup}
-                alt="Mockup with loved ones products"
-                layout="responsive"
-              />
-              <Image
-                src={ConnectDOCDashboard}
-                alt="Mockup with loved ones products"
-              />
+            <Carousel className="row-span-1 ">
+                <Image src={LMSMockup} alt="Mockup with loved ones products" />
+                <Image
+                  src={ConnectDOCDashboard}
+                  alt="Mockup with loved ones products"
+                />
             </Carousel>
           </div>
         </div>

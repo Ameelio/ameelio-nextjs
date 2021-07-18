@@ -18,7 +18,7 @@ const Hero = ({ className }: Props) => {
         <div className="grid grid-cols-1 md:grid-cols-5">
           <div className="md:col-span-3">
             <div className="flex flex-col gap-y-8">
-              <H1 className="text-white text-5xl	font-bold">
+              <H1 className="text-white">
                 Transforming America’s correctional system with technology
               </H1>
 

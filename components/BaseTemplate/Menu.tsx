@@ -21,7 +21,7 @@ const ProductMenuItem = ({ type }: { type: "letters" | "connect" }) => (
       <div className="flex flex-col">
         {type === "letters" ? (
           <div className="flex items-center space-x-2 w-5/12">
-            <LettersWordmark /> <LettersLogo /> 
+            <LettersWordmark /> <LettersLogo />
           </div>
         ) : (
           <div className="flex  items-center space-x-2 w-1/2">
@@ -41,10 +41,11 @@ const ProductMenuItem = ({ type }: { type: "letters" | "connect" }) => (
 interface Props {}
 const Menu = (props: Props) => {
   const [showMobileModal, setShowMobileModal] = useState(false);
+
   return isMobile ? (
-    <div>
+    <div style={{display: 'block'}}>
       <MenuOutlined
-        className="text-xl"
+        className="text-2xl"
         onClick={() => setShowMobileModal(true)}
       />
       <Drawer
@@ -85,13 +86,26 @@ const Menu = (props: Props) => {
         </AntdMenu.Item>
       </AntdMenu.SubMenu>
 
-      <AntdMenu.Item key="who-serve">Who We Serve</AntdMenu.Item>
+      <AntdMenu.SubMenu title="Who We Serve" key="who-serve">
+        <AntdMenu.Item key="who-we-serve-loved-ones">
+          <NextLink href="/who-we-serve/loved-ones">Loved Ones</NextLink>
+        </AntdMenu.Item>
+        <AntdMenu.Item key="who-we-serve-corrections">
+          <NextLink href="/who-we-serve/corrections">Corrections</NextLink>
+        </AntdMenu.Item>
+      </AntdMenu.SubMenu>
       <AntdMenu.SubMenu title="Our Story" key="our-story">
         <AntdMenu.Item key="our-story-problem">
           <NextLink href="/our-story/problem">The Problem</NextLink>
         </AntdMenu.Item>
         <AntdMenu.Item key="our-story-team">
           <NextLink href="/our-story/team">Team</NextLink>
+        </AntdMenu.Item>
+        <AntdMenu.Item key="our-story-team">
+          <Link text="Get In Touch" href={LINKS.GET_IN_TOUCH} external />
+        </AntdMenu.Item>
+        <AntdMenu.Item key="our-story-team">
+          <Link text="We're Hiring" href={LINKS.HIRING} external />
         </AntdMenu.Item>
       </AntdMenu.SubMenu>
     </AntdMenu>

@@ -1,11 +1,4 @@
 import React from "react";
-// import "./Footer.css";
-import {
-  FacebookFilled,
-  InstagramFilled,
-  GithubFilled,
-  TwitterSquareFilled,
-} from "@ant-design/icons";
 import LogoWhite from "assets/Logos/LogoWhite";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import SocialMedia from "./SocialMedia";
