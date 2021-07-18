@@ -2,8 +2,7 @@ import React from "react";
 import BaseTemplate from "components/BaseTemplate";
 import Head from "next/head";
 import PaddedLayout from "components/Layout/PaddedLayout";
-import { Typography } from "antd";
-import { H1 } from "components/Typography";
+import { H2 } from "components/Typography";
 import PayPhone from "assets/OurStory/PayPhone.png";
 import Image from "next/image";
 import BasicCard from "components/Cards/BasicCard";
@@ -27,8 +26,8 @@ const ProblemPage = (props: Props) => {
       <OurStoryBackground className="absolute top-1/4 object-cover z-0" />
       <PaddedLayout>
         <BasicCard>
-          <div className="inline-block">
-            <H1 className="mb-8">Understanding the problem of prison telecommunication</H1>
+          <div className="block">
+            <H2 className="mb-8">Understanding the problem of prison telecommunication</H2>
             <div>
               <div className="md:float-left mr-8">
                 <Image
@@ -38,7 +37,7 @@ const ProblemPage = (props: Props) => {
                   alt="Pay phone"
                 />
               </div>
-              <Typography.Paragraph>
+              <p className="break-normal mb-4">
                 Prison communications are expensive, posing an obstacle to
                 family contact. While increased family contact can reduce
                 recidivism by 56%, the cost of staying in touch with an
@@ -46,15 +45,15 @@ const ProblemPage = (props: Props) => {
                 in the public interest to ensure that incarcerated people can
                 easily maintain supportive relationships with their friends and
                 family on the outside.
-              </Typography.Paragraph>
-              <Typography.Paragraph>
+              </p>
+              <p className="break-normal mb-4">
                 While on the outside we have access to free video calls, email,
                 and very inexpensive phone calls, incarcerated people may need
                 to pay as much as $25 per call and $1.50 per email. The profits
                 from these services support a $3 billion industry that is
                 dominated by a private equity backed duopoly.
-              </Typography.Paragraph>
-              <Typography.Paragraph>
+              </p  >
+              <p className="break-normal	mb-4" >
                 That’s why Ameelio exists, to disrupt the for-profit prison
                 communications industry, and provide a suite of communication
                 tools which support family contact and break the cycle of
@@ -69,7 +68,7 @@ const ProblemPage = (props: Props) => {
                 incarcerated individuals and their counselors, educators, and
                 programs in a way that is impossible under the incumbent
                 for-profit model.
-              </Typography.Paragraph>
+              </p  >
             </div>
           </div>
         </BasicCard>

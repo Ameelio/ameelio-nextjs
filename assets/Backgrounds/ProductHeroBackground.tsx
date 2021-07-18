@@ -3,7 +3,7 @@ interface Props {
 }
 
 const ProductHeroBackground = ({ className }: Props) => (
-  <div className="absolute  w-screen overflow-hidden z-0 right-0">
+  <div className={`absolute  w-screen overflow-hidden z-0 right-0 ${className}`}>
 
   <svg
     width="1474"

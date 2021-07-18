@@ -18,8 +18,8 @@ interface Props {}
 const Team = (props: Props) => {
   return (
     <div>
-      <ProductHeroBackground className="absolute object-cover z-0" />
-      <PaddedLayout className="flex flex-col gap-y-4">
+      <ProductHeroBackground className="mt-4" />
+      <PaddedLayout className="flex flex-col gap-y-4 ">
         <H1 className="text-center">Meet the team</H1>
         <p className="text-center">
           We&apos;re a passionate group made up of everyone from data scientists
@@ -27,7 +27,7 @@ const Team = (props: Props) => {
           researchers. We believe that everyone impacted by incarceration should
           be able to stay in touch with their loved ones for free.{" "}
         </p>
-        <p className="text-center">
+        <p className="text-center z-10">
           We are working as hard as we can to make that a reality.
         </p>
       </PaddedLayout>
@@ -59,9 +59,10 @@ const Team = (props: Props) => {
             </div>
           </div>
         </BasicCard>
-        <PartnerShowcase />
-        <FundersShowcase />
       </PaddedLayout>
+
+      <PartnerShowcase />
+      <FundersShowcase />
     </div>
   );
 };
