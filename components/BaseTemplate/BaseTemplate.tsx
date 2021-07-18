@@ -12,7 +12,7 @@ interface Props {
 
 const BaseTemplate = ({ children, className }: Props) => {
   return (
-    <Layout className={className}>
+    <Layout className={`max-w-screen overflow-hidden${className}`}>
       {/* <div></div> */}
       <Layout.Header className="bg-white flex items-center justify-between">
         <Link href="/" passHref={true}>

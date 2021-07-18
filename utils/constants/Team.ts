@@ -84,6 +84,18 @@ export const TECH_BOARD: TBoardMember[] = [
     company: "Facebook",
   },
   {
+    imageSrc: "/static/images/Board/Anu.png",
+    name: "Anu Khosla",
+    title: "Board Member",
+    company: "ProPublica",
+  },
+  {
+    imageSrc: "/static/images/Board/Anjali.png",
+    name: "Anjali Kumar",
+    title: "Co-Founderr",
+    company: "COVID Tech Connect",
+  },
+  {
     imageSrc: "/static/images/Board/Raphael.png",
     name: "Raphael Lee",
     title: "Co-Founder",
@@ -134,14 +146,9 @@ export const TECH_BOARD: TBoardMember[] = [
   {
     imageSrc: "/static/images/Board/Cindy.png",
     name: "Cindy Weining",
-    title: "Co-Founder",
-    company: "Campaign Zero",
-  },{
-    imageSrc: "/static/images/Board/Anu.png",
-    name: "Anu Khosla",
     title: "Board Member",
-    company: "ProPublica",
-  },
+    company: "Young New Yorkers"
+  }
 ];
 
 export const JUSTICE_BOARD: TBoardMember[] = [
@@ -150,12 +157,6 @@ export const JUSTICE_BOARD: TBoardMember[] = [
     name: "Adryann Glenn",
     title: "Founder & CEO",
     company: "Align Community",
-  },
-  {
-    imageSrc: "/static/images/Board/Anjali.png",
-    name: "Anjali Kumar",
-    title: "Co-Founderr",
-    company: "COVID Tech Connect",
   },
   {
     imageSrc: "/static/images/Board/Alyssa.png",
@@ -170,7 +171,7 @@ export const JUSTICE_BOARD: TBoardMember[] = [
     company: "Columbia University Center for Justice",
   },
   {
-    imageSrc: "/static/images/Board/Deray.png",
+    imageSrc: "/static/images/Board/DeRay.png",
     name: "DeRay McKesson",
     title: "Co-Founder",
     company: "Campaign Zero",

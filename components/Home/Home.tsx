@@ -10,12 +10,13 @@ import Testimonial from "components/Testimonial";
 import ReviewWall from "./ReviewWall";
 import { MIKE } from "utils/constants/Testimonials";
 import HeroBackground from "assets/Backgrounds/HeroBackground";
+import { isMobile } from "react-device-detect";
 
 const Home = () => {
   return (
     <div>
-      <div className="absolute h-screen w-screen overflow-hidden z-0">
-        <HeroBackground className="object-cover" />
+      <div className="absolute h-screen w-screen overflow-hidden z-0" style={{ backgroundImage: 'url(/static/backgrounds/hero-background.svg)', backgroundRepeat: 'no-repeat', backgroundSize: isMobile ? 'cover' : 'contain'}}>
+        {/* <HeroBackground className="object-cover" /> */}
       </div>
 
       <div className="md:mt-24">
