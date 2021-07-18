@@ -6,6 +6,7 @@ import StepByStepItem from "./StepByStepItem";
 import { Typography } from "antd";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import {  H3 } from "components/Typography";
+import { LINKS } from "utils/constants";
 
 interface Props {}
 
@@ -41,13 +42,13 @@ const StepByStep = (props: Props) => {
   return (
     <PaddedLayout>
       <BasicCard>
-        <div className="flex flex-col items-center gap-y-4">
+        <div className="flex flex-col items-center gap-y-4" id="what-to-expect">
           <H3 className="text-center">What to expect when you request a demo</H3>
           <p className="text-center">
             If you’re a DOC or jail interested in getting Connect to your state,
             here’s what to expect when you request a demo.
           </p>
-          <Button variant="primary">
+          <Button variant="primary" onClick={() => window.open(LINKS.CONNECT_DEMO, "_blank")}>
             Request a Demo
           </Button>
         </div>

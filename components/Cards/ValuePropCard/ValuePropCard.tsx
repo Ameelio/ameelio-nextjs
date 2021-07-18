@@ -5,7 +5,6 @@ import ValuePropsItem from "components/Product/ValuePropsItem";
 import Image, { ImageProps } from "next/image";
 import Button from "components/Button";
 interface Props {
-
   valueProps: TValuePropItem[];
   className?: string;
   cta?: TCallToAction;
@@ -21,7 +20,15 @@ const ValuePropCard = ({ valueProps, cta, meta, className }: Props) => {
         ))}
       </div>
       <div className="flex flex-col items-center">
-        {cta && <Button className="mt-4" variant="primary">{cta.text}</Button>}
+        {cta && (
+          <Button
+            className="mt-4"
+            variant="primary"
+            onClick={() => window.open(cta.link)}
+          >
+            {cta.text}
+          </Button>
+        )}
         {meta}
       </div>
     </BasicCard>

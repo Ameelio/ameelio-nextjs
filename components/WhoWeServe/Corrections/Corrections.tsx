@@ -10,6 +10,7 @@ import PaddedLayout from "components/Layout/PaddedLayout";
 import ProductCard from "components/Cards/ProductCard/ProductCard";
 import Image from "next/image";
 import LettersTracking from 'assets/Mockups/Letters/LettersTracking.png';
+import { LINKS } from "utils/constants";
 interface Props {}
 
 const Corrections = (props: Props) => {
@@ -23,7 +24,7 @@ const Corrections = (props: Props) => {
         <ProductCard
           type="connect"
           desc="Support free video calls for family meetings and programming, while fully integrating your video and in-person visitation systems"
-          cta={{ text: "Request a Demo", link: "" }}
+          cta={{ text: "Request a Demo", link: LINKS.CONNECT_DEMO }}
           image={
             <div style={{ width: 245, height: 185}}>
               <Image
@@ -38,7 +39,7 @@ const Corrections = (props: Props) => {
          <ProductCard
           type="letters"
           desc="Guarantee tamper-proof mail by approving our contactless printing and shipping solution"
-          cta={{ text: "Get in Touch", link: "" }}
+          cta={{ text: "Get in Touch", link: LINKS.GET_IN_TOUCH  }}
           image={
             <div style={{ width: 240, height: 300}}>
               <Image
@@ -51,7 +52,7 @@ const Corrections = (props: Props) => {
       </PaddedLayout>
       <StepByStep />
       <div className="bg-blue-700">
-        <MediaShowcase title="Ameelio in the Press" titleClassName="text-gray-500 text-xl"/>
+        <MediaShowcase title="Ameelio in the Press" titleClassName="text-white opacity-50"/>
       </div>
       <FundersShowcase />
     </Layout.Content>

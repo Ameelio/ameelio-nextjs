@@ -37,7 +37,7 @@ const LovedOnes = (props: Props) => {
       </PaddedLayout>
       <ReviewWall />
       <PaddedLayout>
-        <BasicCard>
+        <BasicCard id="how-we-free">
           <H2 className="text-center">How we&apos;re free</H2>
           <p className="text-center mt-4">
             Ameelio is a nonprofit, and 100 percent of the money we earn goes

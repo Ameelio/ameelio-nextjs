@@ -10,7 +10,7 @@ import { Typography } from "antd";
 import ConnectDash from "assets/Mockups/Connect/ConnectDash.png";
 import ConnectChat from "assets/Mockups/Connect/ConnectChat.png";
 import ConnectInCall from "assets/Mockups/Connect/ConnectInCall.png";
-import { CONNECT_VALUE_PROPS } from "utils/constants";
+import { CONNECT_VALUE_PROPS, LINKS } from "utils/constants";
 import ValuePropCard from "components/Cards/ValuePropCard";
 
 const Hero = () => {
@@ -30,9 +30,14 @@ const Hero = () => {
               free for families
             </Typography.Title>
             <div className="flex">
-              <Button variant="primary">Request a Demo</Button>
+              <Button
+                variant="primary"
+                onClick={() => window.open(LINKS.CONNECT_DEMO, "_blank")}
+              >
+                Request a Demo
+              </Button>
               <Button variant="secondary" className="ml-4">
-                What to Expect
+                <a href="#what-to-expect">What to Expect</a>
               </Button>
             </div>
           </div>

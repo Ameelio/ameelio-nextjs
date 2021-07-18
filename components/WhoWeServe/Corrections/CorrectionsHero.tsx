@@ -5,7 +5,7 @@ import React from "react";
 import Button from "components/Button";
 import Image from "next/image";
 import ConnectDOCDashFramed from "assets/Mockups/Connect/ConnectDOCDashFramed.png";
-import { CORRECTIONS_VALUE_PROPS } from "utils/constants";
+import { CORRECTIONS_VALUE_PROPS, LINKS } from "utils/constants";
 import ValuePropCard from "components/Cards/ValuePropCard";
 import { H1 } from "components/Typography";
 
@@ -24,7 +24,7 @@ const CorrectionsHero = () => {
               and management tools
             </H1>
             <div className="flex">
-              <Button variant="primary">Request a Demo</Button>
+              <Button variant="primary" onClick={() => window.open(LINKS.CONNECT_DEMO, "_blank")}>Request a Demo</Button>
             </div>
           </div>
           <div>
@@ -37,7 +37,7 @@ const CorrectionsHero = () => {
         </div>
         <ValuePropCard
           valueProps={CORRECTIONS_VALUE_PROPS}
-          cta={{ text: "Get In Touch", link: "" }}
+          cta={{ text: "Get In Touch", link: LINKS.GET_IN_TOUCH}}
           meta={
             <Image
               src={ConnectTablet}

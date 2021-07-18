@@ -19,7 +19,7 @@ const Showcase = ({
 }: ShowCaseProps) => {
   return (
     <div className={`${className} flex flex-col text-center`}>
-      <H2 className={`text-2xl font-bold ${titleClassName}`}>{title}</H2>
+      <H2 className={titleClassName || `text-2xl font-bold`}>{title}</H2>
       <div className="flex justify-center flex-wrap	gap-x-16 md:gap-x-0 ">
 
         {items.map((item) => {

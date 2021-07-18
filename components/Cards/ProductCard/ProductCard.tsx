@@ -25,7 +25,7 @@ const ProductCard = ({ image, type, desc, cta }: Props) => {
           {cta === "download" ? (
             <AppStoreButtonDuo className="flex flex-col" />
           ) : (
-            <Button variant="primary">{cta.text}</Button>
+            <Button variant="primary" onClick={() => window.open(cta.link, "_blank")}>{cta.text}</Button>
           )}
           <Link href={`/products/${type}`} text="Learn more" />
         </div>

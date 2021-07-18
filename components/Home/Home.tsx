@@ -21,7 +21,7 @@ const Home = () => {
       <div className="md:mt-24">
         <Hero />
       </div>
-      <MediaShowcase title="In the Press" className="mt-20" />
+      <MediaShowcase title="In the Press" className="mt-20 md:mt-32" />
       <ReviewWall />
       <Overview />
       <Testimonial {...MIKE} />

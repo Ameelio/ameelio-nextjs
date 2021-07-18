@@ -24,7 +24,9 @@ const LovedOnesHero = () => {
             </span>
             <H1>Stay in touch with your loved ones for free</H1>
             <div className="flex">
-              <Button variant="secondary">How we&apos;re free</Button>
+              <Button variant="secondary">
+                <a href="#how-we-free">How we&apos;re free</a>
+              </Button>
             </div>
           </div>
           <div className="flex md:col-start-3 mt-8">

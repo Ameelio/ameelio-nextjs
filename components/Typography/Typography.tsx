@@ -20,7 +20,7 @@ export const H1 = ({className, children}: Props) => {
 
 export const H2 = ({className, children}: Props) => {
     return (
-        <h2 className={`font-bold text-3xl ${className}`}>
+        <h2 className={`font-bold  ${isMobile ? 'text-3xl' : 'text-2xl'} ${className}`}>
             {children}
         </h2>
     )
