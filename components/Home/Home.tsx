@@ -13,16 +13,21 @@ import HeroBackground from "assets/Backgrounds/HeroBackground";
 import { isMobile } from "react-device-detect";
 
 const Home = () => {
+  console.log(isMobile)
   return (
     <div>
-      <div className="absolute h-screen w-screen overflow-hidden z-0" style={{ backgroundImage: 'url(/static/backgrounds/hero-background.svg)', backgroundRepeat: 'no-repeat', backgroundSize: isMobile ? 'cover' : 'contain'}}>
-        {/* <HeroBackground className="object-cover" /> */}
-      </div>
-
+      <div
+        className="absolute h-screen w-screen overflow-hidden z-0"
+        style={{
+          backgroundImage: "url(/static/backgrounds/hero-background.svg)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: isMobile ? "cover" : "contain",
+        }}
+      />
       <div className="md:mt-24">
         <Hero />
       </div>
-      <MediaShowcase title="In the Press" className="mt-20 md:mt-32" />
+      <MediaShowcase title="In the Press" />
       <ReviewWall />
       <Overview />
       <Testimonial {...MIKE} />

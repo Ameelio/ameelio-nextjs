@@ -18,7 +18,7 @@ const Hero = ({ className }: Props) => {
         <div className="grid grid-cols-1 md:grid-cols-5">
           <div className="md:col-span-3">
             <div className="flex flex-col gap-y-8">
-              <H1 className="text-white mb-4">
+              <H1 className="text-white mb-2 md:mb-4">
                 Transforming America’s correctional system with technology
               </H1>
 
@@ -30,11 +30,11 @@ const Hero = ({ className }: Props) => {
                 successful reentry from day one.
               </p>
 
-              <div className="flex flex-col md:flex-row md:items-center mt-4">
+              <div className="flex flex-col md:flex-row md:items-center mt-2 md:mt-4">
                 <span className="text-white">I am:</span>
                 <div className="flex mt-4 md:mt-0">
                   <Link passHref href="/who-we-serve/loved-ones">
-                    <Button variant="tertiary" className="ml-4">A Loved One</Button>
+                    <Button variant="tertiary" className="md:ml-4">A Loved One</Button>
                   </Link>
                   <Link passHref href="/who-we-serve/corrections">
                     <Button variant="tertiary" className="ml-4">Corrections Staff</Button>
