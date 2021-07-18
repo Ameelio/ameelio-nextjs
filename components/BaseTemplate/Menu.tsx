@@ -101,10 +101,10 @@ const Menu = (props: Props) => {
         <AntdMenu.Item key="our-story-team">
           <NextLink href="/our-story/team">Team</NextLink>
         </AntdMenu.Item>
-        <AntdMenu.Item key="our-story-team">
+        <AntdMenu.Item key="our-story-get-in-touch">
           <Link text="Get In Touch" href={LINKS.GET_IN_TOUCH} external />
         </AntdMenu.Item>
-        <AntdMenu.Item key="our-story-team">
+        <AntdMenu.Item key="our-story-hiring">
           <Link text="We're Hiring" href={LINKS.HIRING} external />
         </AntdMenu.Item>
       </AntdMenu.SubMenu>
