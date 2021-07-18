@@ -3,6 +3,7 @@ import BaseTemplate from "components/BaseTemplate";
 import Head from "next/head";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import { Typography } from "antd";
+import { H1 } from "components/Typography";
 import PayPhone from "assets/OurStory/PayPhone.png";
 import Image from "next/image";
 import BasicCard from "components/Cards/BasicCard";
@@ -27,12 +28,15 @@ const ProblemPage = (props: Props) => {
       <PaddedLayout>
         <BasicCard>
           <div className="inline-block">
-            <Typography.Title>
-              Understanding the problem of prison telecommunication
-            </Typography.Title>
-            <div >
-              <div className="md:float-left" >
-                <Image src={PayPhone}  width={220} height={336} alt="Pay phone" />
+            <H1 className="mb-8">Understanding the problem of prison telecommunication</H1>
+            <div>
+              <div className="md:float-left mr-8">
+                <Image
+                  src={PayPhone}
+                  width={220}
+                  height={336}
+                  alt="Pay phone"
+                />
               </div>
               <Typography.Paragraph>
                 Prison communications are expensive, posing an obstacle to

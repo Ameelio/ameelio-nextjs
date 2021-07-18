@@ -36,3 +36,13 @@ export interface TCallToAction {
     link: string;
     text: string;
 }
+
+export interface TTeamMember {
+    imageSrc: string;
+    name: string;
+    title: string; 
+}
+
+export interface TBoardMember extends TTeamMember {
+    company: string;
+}

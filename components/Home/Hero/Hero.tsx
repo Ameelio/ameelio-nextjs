@@ -7,9 +7,11 @@ import ConnectDOCDashboard from "assets/Mockups/Connect/ConnectDOCDashboard.png"
 import { H1 } from "components/Typography";
 import Link from "next/link";
 import HeroMockup from "assets/Mockups/HeroMockup.png";
-interface Props {className?: string}
+interface Props {
+  className?: string;
+}
 
-const Hero = ({className}: Props) => {
+const Hero = ({ className }: Props) => {
   return (
     <div className={`flex z-10 ${className}`}>
       <PaddedLayout className="flex z-10">
@@ -31,34 +33,20 @@ const Hero = ({className}: Props) => {
               <div className="flex flex-col md:flex-row gap-2 md:items-center">
                 <span className="text-white">I am:</span>
                 <div className="flex gap-x-4">
-
-                <Link passHref href="/who-we-serve/loved-ones">
-                  <Button variant="tertiary">A Loved One</Button>
-                </Link>
-                <Link passHref href="/who-we-serve/corrections">
-                  <Button variant="tertiary">Corrections Staff</Button>
-                </Link>
-                {/* <Link><Button variant="tertiary">An Educator</Button></Link> */}
+                  <Link passHref href="/who-we-serve/loved-ones">
+                    <Button variant="tertiary">A Loved One</Button>
+                  </Link>
+                  <Link passHref href="/who-we-serve/corrections">
+                    <Button variant="tertiary">Corrections Staff</Button>
+                  </Link>
+                  {/* <Link><Button variant="tertiary">An Educator</Button></Link> */}
                 </div>
-
               </div>
             </div>
           </div>
-          {/* <div className="hidden md:flex">
-            <div className="mt-8" style={{ width: 150, height: 275 }}>
-              <Image src={HeroMockup} alt="Connect call" />
-            </div>
-            <div className="mt-8" style={{ width: 500, height: 300 }}>
-              <Image
-                src={ConnectDOCDashboard}
-                // layout="responsive"
-                alt="Connect call"
-              />
-            </div>
-          </div> */}
         </div>
       </PaddedLayout>
-      <div className="hidden md:block absolute right-0 mt-12">
+      <div className="hidden md:block w-5/12 absolute -right-24">
         <Image src={HeroMockup} alt="Connect call" className="" />
       </div>
     </div>

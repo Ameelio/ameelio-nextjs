@@ -21,9 +21,9 @@ const ProductCard = ({ image, type, desc, cta }: Props) => {
         {image}
         <div className="flex flex-col items-center md:items-start md:justify-center gap-y-8 md:col-span-2	">
           {type === "letters" ? <LettersWordmark /> : <ConnectWordmark />}
-          <p className="text-center md:text-start">{desc}</p>
+          <p className="text-center md:text-left">{desc}</p>
           {cta === "download" ? (
-            <AppStoreButtonDuo className="flex flex-col"/>
+            <AppStoreButtonDuo className="flex flex-col" />
           ) : (
             <Button variant="primary">{cta.text}</Button>
           )}
