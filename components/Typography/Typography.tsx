@@ -10,7 +10,7 @@ export const H1 = ({ className, children }: Props) => {
   return (
     <h1
       className={`font-bold break-normal	 ${
-        isMobile ? "text-5xl" : "text-3xl"
+        isMobile ? "text-3xl" : "text-5xl"
       }  ${className}`}
     >
       {children}
@@ -22,7 +22,7 @@ export const H2 = ({ className, children }: Props) => {
   return (
     <h2
       className={`font-bold  break-normal	  ${
-        isMobile ? "text-3xl" : "text-2xl"
+        isMobile ? "text-2xl" : "text-3xl"
       } ${className}`}
     >
       {children}
