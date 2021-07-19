@@ -40,11 +40,11 @@ const BaseTemplate = ({ children, className }: Props) => {
         <meta property="og:image" content="/static/images/HeroMockup.png" />
         <meta
           property="og:title"
-          content="Ameelio: Free Letters, Photos & Cards to Prison"
+          content="Ameelio: Transforming America’s correctional system with technology"
         />
         <meta
           property="og:description"
-          content="Send free letters, photos & cards to your incarcerated loved ones. We are a nonprofit technology company committed to transforming prison communications."
+          content="Transforming America’s correctional system with technology"
         />
         <meta property="og:site_name" content="Ameelio" />
         <meta property="og:url" content="https://ameelio.org/" />
