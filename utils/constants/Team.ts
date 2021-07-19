@@ -116,7 +116,7 @@ export const TECH_BOARD: TBoardMember[] = [
   {
     imageSrc: "/static/images/Board/Doruk.png",
     name: "Doruk Gurel",
-    title: "Product Strategist",
+    title: "Product",
     company: "Wells Fargo",
   },
   {
