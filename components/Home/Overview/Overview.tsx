@@ -8,7 +8,6 @@ import MetricCard from "components/Cards/MetricCard";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import OverviewBackground from "assets/Backgrounds/OverviewBackground";
 import { METRIC_CARD_ITEMS } from "utils/constants";
-
 interface Props {}
 
 type TTab = "what" | "why";
@@ -40,20 +39,26 @@ const Overview = (props: Props) => {
             tabList={tabList}
             onTabChange={(key) => setTab(key as TTab)}
           >
+            <div className="h-96 md:h-auto">
             <Typography.Text className="text-xl">
               {CONTENT_LIST[tab]}
             </Typography.Text>
+            </div>
+      
           </BasicCard>
 
           <div className="hidden md:block  max-w-full">
             <OverviewBackground className="absolute right-0 w-6/12 z-0" />
 
-            <Carousel className="row-span-1 ">
-                <Image src={LMSMockup} alt="Mockup with loved ones products" />
-                <Image
-                  src={ConnectDOCDashboard}
-                  alt="Mockup with loved ones products"
-                />
+            <Carousel className="row-span-1" autoplay>
+              <Image
+                src={LMSMockup}
+                alt="Mockup with loved ones products"
+              />
+              <Image
+                src={ConnectDOCDashboard}
+                alt="Mockup with loved ones products"
+              />
             </Carousel>
           </div>
         </div>
