@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Menu as AntdMenu, Drawer } from "antd";
 import NextLink from "next/link";
-import { isMobile } from "react-device-detect";
 import { MenuOutlined } from "@ant-design/icons";
 import LettersWordmark from "assets/Wordmarks/LettersWordmark";
 import ConnectWordmark from "assets/Wordmarks/ConnectWordmark";
@@ -9,6 +8,7 @@ import LettersLogo from "assets/Logos/LettersLogo";
 import ConnectLogo from "assets/Logos/ConnectLogo";
 import Link from "components/Link";
 import { LINKS } from "utils/constants";
+import { useIsMobile } from "hooks/useIsMobile";
 
 const ProductMenuItem = ({ type }: { type: "letters" | "connect" }) => (
   <NextLink
@@ -42,8 +42,9 @@ interface Props {}
 const Menu = (props: Props) => {
   const [showMobileModal, setShowMobileModal] = useState(false);
 
+  const isMobile = useIsMobile();
   return isMobile ? (
-    <div style={{display: 'block'}}>
+    <span>
       <MenuOutlined
         className="text-2xl"
         onClick={() => setShowMobileModal(true)}
@@ -74,7 +75,7 @@ const Menu = (props: Props) => {
           </div>
         </div>
       </Drawer>
-    </div>
+    </span>
   ) : (
     <AntdMenu mode="horizontal">
       <AntdMenu.SubMenu title="Platform" key="products">

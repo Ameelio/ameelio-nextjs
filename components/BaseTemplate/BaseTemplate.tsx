@@ -14,12 +14,12 @@ const BaseTemplate = ({ children, className }: Props) => {
   return (
     <Layout className={`max-w-screen overflow-hidden${className}`}>
       {/* <div></div> */}
-      <Layout.Header className="bg-white flex items-center justify-between">
+      <div className="px-12 bg-white flex items-center justify-between" style={{height: '64px', lineHeight: '64px'}}>
         <Link href="/" passHref={true}>
           <a><Logo /></a>
         </Link>
         <Menu />
-      </Layout.Header>
+      </div>
       {children}
         <Footer />
     </Layout>

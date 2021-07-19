@@ -1,5 +1,5 @@
+import { useIsMobile } from "hooks/useIsMobile";
 import React from "react";
-import { isMobile } from "react-device-detect";
 
 interface Props {
   className?: string;
@@ -7,10 +7,11 @@ interface Props {
 }
 
 export const H1 = ({ className, children }: Props) => {
+  const isMobile = useIsMobile();
   return (
     <h1
       className={`font-bold break-normal	 ${
-        isMobile ? "text-3xl" : "text-5xl"
+        isMobile ? "text-4xl" : "text-5xl"
       }  ${className}`}
     >
       {children}
@@ -19,6 +20,8 @@ export const H1 = ({ className, children }: Props) => {
 };
 
 export const H2 = ({ className, children }: Props) => {
+  const isMobile = useIsMobile();
+
   return (
     <h2
       className={`font-bold  break-normal	  ${

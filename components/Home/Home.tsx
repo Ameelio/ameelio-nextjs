@@ -3,17 +3,16 @@ import React from "react";
 import Hero from "./Hero";
 import MediaShowcase from "components/Showcase/MediaShowcase";
 import FundersShowcase from "components/Showcase/FundersShowcase";
-
 import Overview from "./Overview";
 import PartnerShowcase from "components/Showcase/PartnerShowcase";
 import Testimonial from "components/Testimonial";
 import ReviewWall from "./ReviewWall";
 import { MIKE } from "utils/constants/Testimonials";
-import HeroBackground from "assets/Backgrounds/HeroBackground";
-import { isMobile } from "react-device-detect";
+import { useIsMobile } from "hooks/useIsMobile";
 
 const Home = () => {
-  console.log(isMobile)
+  const isMobile = useIsMobile();
+
   return (
     <div>
       <div
