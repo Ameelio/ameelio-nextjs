@@ -20,7 +20,7 @@ const Home = () => {
         style={{
           backgroundImage: "url(/static/backgrounds/hero-background.svg)",
           backgroundRepeat: "no-repeat",
-          backgroundSize: isMobile ? "cover" : "contain",
+          backgroundSize: isMobile ? "" : "contain",
         }}
       />
       <div className="md:mt-24">
