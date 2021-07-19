@@ -2,8 +2,6 @@ import React from "react";
 import Button from "components/Button";
 import Image from "next/image";
 import PaddedLayout from "components/Layout/PaddedLayout";
-import ConnectChat from "assets/Mockups/Connect/ConnectChat.png";
-import ConnectDOCDashboard from "assets/Mockups/Connect/ConnectDOCDashboard.png";
 import { H1 } from "components/Typography";
 import Link from "next/link";
 import HeroMockup from "assets/Mockups/HeroMockup.png";
