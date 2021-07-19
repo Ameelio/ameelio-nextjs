@@ -44,7 +44,7 @@ const BaseTemplate = ({ children, className }: Props) => {
         />
         <meta
           property="og:description"
-          content="Transforming America’s correctional system with technology"
+          content="By connecting incarcerated people with support networks, we cut recidivism and sustainably reduce prison populations. Ameelio’s ecosystem of products helps everyone — from families to corrections officials to service providers — empowering successful reentry from day one."
         />
         <meta property="og:site_name" content="Ameelio" />
         <meta property="og:url" content="https://ameelio.org/" />
