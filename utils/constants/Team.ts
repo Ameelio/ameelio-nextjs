@@ -92,7 +92,7 @@ export const TECH_BOARD: TBoardMember[] = [
   {
     imageSrc: "/static/images/Board/Anjali.png",
     name: "Anjali Kumar",
-    title: "Co-Founderr",
+    title: "Co-Founder",
     company: "COVID Tech Connect",
   },
   {
