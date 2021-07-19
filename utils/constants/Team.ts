@@ -56,8 +56,13 @@ export const TEAMMATES: TTeamMember[] = [
   },
   {
     name: "Kamryn Moe",
-    title: "Fundraising",
+    title: "Fundraising Analyst",
     imageSrc: "/static/images/Team/Kamrym.png",
+  },
+  {
+    name: "Cecilia Abeid",
+    title: "Creative Director",
+    imageSrc: "/static/images/Team/Cecilia.png",
   },
   {
     name: "Isis Decrem",
