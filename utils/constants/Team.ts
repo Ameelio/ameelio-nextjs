@@ -2,7 +2,7 @@ import { TBoardMember, TTeamMember } from "types";
 
 export const FOUNDERS: TTeamMember[] = [
   {
-    name: 'Zo Orchingwa',
+    name: "Zo Orchingwa",
     title: "Co-Founder, CEO",
     imageSrc: "/static/images/Team/Zo.png",
   },
@@ -20,44 +20,9 @@ export const TEAMMATES: TTeamMember[] = [
     imageSrc: "/static/images/Team/Andrew.png",
   },
   {
-    name: "Jesse Horne",
-    title: "Software Engineer",
-    imageSrc: "/static/images/Team/Jesse.png",
-  },
-  {
-    name: "Mark Pekala",
-    title: "Software Engineer",
-    imageSrc: "/static/images/Team/Mark.png",
-  },
-  {
-    name: "Elizabeth Gray",
-    title: "Product Designer",
-    imageSrc: "/static/images/Team/Liz.png",
-  },
-  {
-    name: "Tori Qiu",
-    title: "Software Engineer Intern",
-    imageSrc: "/static/images/Team/Tori.png",
-  },
-  {
-    name: "Madeleine Lee",
-    title: "Software Engineer Intern",
-    imageSrc: "/static/images/Team/Madeleine.png",
-  },
-  {
-    name: "Luis Pedraza",
-    title: "Software Engineer",
-    imageSrc: "/static/images/Team/Luis.png",
-  },
-  {
     name: "Ben Porter",
     title: "Tech Lead",
     imageSrc: "/static/images/Team/Ben.png",
-  },
-  {
-    name: "Kamryn Moe",
-    title: "Fundraising Analyst",
-    imageSrc: "/static/images/Team/Kamrym.png",
   },
   {
     name: "Cecilia Abeid",
@@ -65,9 +30,44 @@ export const TEAMMATES: TTeamMember[] = [
     imageSrc: "/static/images/Team/Cecilia.png",
   },
   {
+    name: "Elizabeth Gray",
+    title: "Product Designer",
+    imageSrc: "/static/images/Team/Liz.png",
+  },
+  {
     name: "Isis Decrem",
-    title: "Fundraising",
+    title: "Customer Success Intern",
     imageSrc: "/static/images/Team/Isis.png",
+  },
+  {
+    name: "Jesse Horne",
+    title: "Software Engineer",
+    imageSrc: "/static/images/Team/Jesse.png",
+  },
+  {
+    name: "Kamryn Moe",
+    title: "Fundraising Intern",
+    imageSrc: "/static/images/Team/Kamrym.png",
+  },
+  {
+    name: "Liv Jenks",
+    title: "Product Design Intern",
+    imageSrc: "/static/images/Team/Liv.png",
+  },
+  {
+    name: "Luis Pedraza",
+    title: "Software Engineer",
+    imageSrc: "/static/images/Team/Luis.png",
+  },
+  {
+    name: "Madeleine Lee",
+    title: "Software Engineer Intern",
+    imageSrc: "/static/images/Team/Madeleine.png",
+  },
+  {
+    name: "Mark Pekala",
+    title: "Software Engineer",
+    imageSrc: "/static/images/Team/Mark.png",
   },
   {
     name: "Ruhi Manek",
@@ -75,9 +75,9 @@ export const TEAMMATES: TTeamMember[] = [
     imageSrc: "/static/images/Team/Ruhi.png",
   },
   {
-    name: "Liv Jenks",
-    title: "Product Design Intern",
-    imageSrc: "/static/images/Team/Liv.png",
+    name: "Tori Qiu",
+    title: "Software Engineer Intern",
+    imageSrc: "/static/images/Team/Tori.png",
   },
 ];
 
@@ -179,6 +179,6 @@ export const JUSTICE_BOARD: TBoardMember[] = [
     imageSrc: "/static/images/Board/Cindy.png",
     name: "Cindy Weining",
     title: "Board Member",
-    company: "Young New Yorkers"
-  }
+    company: "Young New Yorkers",
+  },
 ];
