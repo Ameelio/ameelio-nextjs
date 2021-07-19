@@ -2,7 +2,7 @@ import { TBoardMember, TTeamMember } from "types";
 
 export const FOUNDERS: TTeamMember[] = [
   {
-    name: 'Uzoma "Zo" Orchingwa',
+    name: 'Zo Orchingwa',
     title: "Co-Founder, CEO",
     imageSrc: "/static/images/Team/Zo.png",
   },
@@ -143,12 +143,6 @@ export const TECH_BOARD: TBoardMember[] = [
     title: "Product Lead",
     company: "Google ",
   },
-  {
-    imageSrc: "/static/images/Board/Cindy.png",
-    name: "Cindy Weining",
-    title: "Board Member",
-    company: "Young New Yorkers"
-  }
 ];
 
 export const JUSTICE_BOARD: TBoardMember[] = [
@@ -175,5 +169,11 @@ export const JUSTICE_BOARD: TBoardMember[] = [
     name: "DeRay McKesson",
     title: "Co-Founder",
     company: "Campaign Zero",
+  },
+  {
+    imageSrc: "/static/images/Board/Cindy.png",
+    name: "Cindy Weining",
+    title: "Board Member",
+    company: "Young New Yorkers"
   }
 ];
