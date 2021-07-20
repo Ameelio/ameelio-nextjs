@@ -60,7 +60,7 @@ export const TEAMMATES: TTeamMember[] = [
     imageSrc: "/static/images/Team/Luis.png",
   },
   {
-    name: "Madeleine Lee",
+    name: "Madeleine Song",
     title: "Software Engineer Intern",
     imageSrc: "/static/images/Team/Madeleine.png",
   },
