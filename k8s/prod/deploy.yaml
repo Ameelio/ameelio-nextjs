@@ -1,0 +1,72 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ameelio-org-v2
+  name: ameelio-org-v2
+  namespace: ameelio-org-v2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ameelio-org-v2
+  template:
+    metadata:
+      labels:
+        app: ameelio-org-v2
+      namespace: ameelio-org-v2
+    spec:
+      containers:
+      - image: registry.digitalocean.com/ameelio-registry/ameelio-org-v-2:latest
+        name: ameelio-org-v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 2
+        envFrom:
+          - configMapRef:
+              name: ameelio-org-v2-config
+                #    - secretRef:
+                #        name: ameelio-org-v2-secrets
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: ameelio-org-v2
+  name: ameelio-org-v2-config
+  namespace: ameelio-org-v2
+data:
+  NEXT_PUBLIC_HJID: '2511396'
+  NEXT_PUBLIC_HJSV: '6'
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ameelio-org-v2
+  name: ameelio-org-v2
+  namespace: ameelio-org-v2
+  annotations:
+    service.beta.kubernetes.io/do-loadbalancer-protocol: "http"
+    service.beta.kubernetes.io/do-loadbalancer-size-slug: "lb-small" # or lb-medium|lb-large
+spec:
+  type: LoadBalancer
+  selector:
+    app: ameelio-org-v2
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30004
+
