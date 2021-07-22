@@ -20,5 +20,5 @@ export const MIKE: TTestimonialItem = {
     quote: "I would like to say thank you to Ameelio for creating this app. You have no idea what this has done for my family. My boys are communicating for the first time pretty much in 8 years.",
     author: "Taralynn P.",
     occupation: 'Google Reviews, May 29, 2021',
-    imageSrc: '/static/images/MikeGass.png',
+    imageSrc: 'https://play-lh.googleusercontent.com/a/AATXAJwJsF2WE9USflcueQW0nq3b8E8DBbc3iWuPVMtt=w96-h96-n-rw-mo',
   };
