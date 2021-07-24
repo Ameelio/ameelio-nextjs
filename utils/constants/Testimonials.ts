@@ -5,7 +5,7 @@ export const JUDY: TTestimonialItem = {
     "This is such an incredible service. I’ve been incarcerated for decades, family is all I have. Being able to talk to them everyday without worrying about cost is life-changing.",
   author: "Judy",
   occupation: "Iowa Correctional Institution for Women",
-  imageSrc: "/static/images/Judy.png",
+  imageSrc: "https://play-lh.googleusercontent.com/a/AATXAJwbngBFJOPJ6WORto1r3z_7H2PqTnxlcdJPd080=w96-h96-n-rw-mo",
 };
 
 export const MIKE: TTestimonialItem = {
