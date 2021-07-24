@@ -15,7 +15,7 @@ const Hero = ({ className }: Props) => {
       <PaddedLayout className="flex z-10">
         <div className="grid grid-cols-1 md:grid-cols-5">
           <div className="md:col-span-3">
-            <div className="flex flex-col gap-y-8">
+            <div className="flex flex-col gap-y-8 md:gap-y-1">
               <H1 className="text-white mb-2 md:mb-4">
                 Transforming America’s correctional system with technology
               </H1>
@@ -44,7 +44,7 @@ const Hero = ({ className }: Props) => {
           </div>
         </div>
       </PaddedLayout>
-      <div className="hidden md:block w-5/12 absolute right-4">
+      <div className="hidden md:block md:w-4/12  lg:w-5/12 absolute right-4">
         <Image src={HeroMockup} alt="Connect call" className="" />
       </div>
     </div>

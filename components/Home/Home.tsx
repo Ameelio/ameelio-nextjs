@@ -23,7 +23,7 @@ const Home = () => {
           backgroundSize: isMobile ? "" : "contain",
         }}
       />
-      <div className="md:my-16 xl:my-24">
+      <div className="md:my-8 lg:my-16 xl:my-24">
         <Hero />
       </div>
       <MediaShowcase title="In the Press" />
