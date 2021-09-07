@@ -32,12 +32,20 @@ const Hero = ({ className }: Props) => {
                 <span className="text-white">I am:</span>
                 <div className="flex mt-4 md:mt-0">
                   <Link passHref href="/who-we-serve/loved-ones">
-                    <Button variant="tertiary" className="md:ml-4">A Loved One</Button>
+                    <Button variant="tertiary" className="md:ml-4">
+                      A Loved One
+                    </Button>
                   </Link>
                   <Link passHref href="/who-we-serve/corrections">
-                    <Button variant="tertiary" className="ml-4">Corrections Staff</Button>
+                    <Button variant="tertiary" className="ml-4">
+                      Corrections Staff
+                    </Button>
                   </Link>
-                  {/* <Link><Button variant="tertiary">An Educator</Button></Link> */}
+                  <Link passHref href="/who-we-serve/educators">
+                    <Button variant="tertiary" className="ml-4">
+                      An Educator
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
