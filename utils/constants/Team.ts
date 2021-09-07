@@ -21,7 +21,7 @@ export const TEAMMATES: TTeamMember[] = [
   },
   {
     name: "Ben Porter",
-    title: "Tech Lead",
+    title: "Head of Engineering",
     imageSrc: "/static/images/Team/Ben.png",
   },
   {
@@ -40,29 +40,14 @@ export const TEAMMATES: TTeamMember[] = [
     imageSrc: "/static/images/Team/Isis.png",
   },
   {
-    name: "Jesse Horne",
-    title: "Software Engineer",
-    imageSrc: "/static/images/Team/Jesse.png",
-  },
-  {
     name: "Kamryn Moe",
     title: "Fundraising Intern",
     imageSrc: "/static/images/Team/Kamrym.png",
   },
   {
-    name: "Liv Jenks",
-    title: "Product Design Intern",
-    imageSrc: "/static/images/Team/Liv.png",
-  },
-  {
     name: "Luis Pedraza",
     title: "Software Engineer",
     imageSrc: "/static/images/Team/Luis.png",
-  },
-  {
-    name: "Madeleine Song",
-    title: "Software Engineer Intern",
-    imageSrc: "/static/images/Team/Madeleine.png",
   },
   {
     name: "Mark Pekala",
@@ -75,9 +60,9 @@ export const TEAMMATES: TTeamMember[] = [
     imageSrc: "/static/images/Team/Ruhi.png",
   },
   {
-    name: "Tori Qiu",
-    title: "Software Engineer Intern",
-    imageSrc: "/static/images/Team/Tori.png",
+    name: "Lance Ivy",
+    title: "Principal Engineer",
+    imageSrc: "/static/images/Team/LanceIvy.png",
   },
 ];
 
