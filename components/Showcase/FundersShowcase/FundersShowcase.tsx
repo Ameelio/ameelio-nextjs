@@ -12,6 +12,7 @@ import ZendeskLogo from "assets/Funders/Zendesk";
 import { TShowcaseItem } from "types";
 import Showcase from "../Showcase";
 import PaddedLayout from "components/Layout/PaddedLayout";
+import FFWDLogo from "assets/Funders/FFWD";
 
 const FUNDERS: TShowcaseItem[] = [
   { label: "Jack Dorsey" },
@@ -27,6 +28,7 @@ const FUNDERS: TShowcaseItem[] = [
   { label: "Google.org", asset: <GoogleLogo /> },
   { label: "American Bar Endowment", asset: <ABELogo /> },
   { label: "Zendesk", asset: <ZendeskLogo /> },
+  { label: "Fast Forward", asset: <FFWDLogo /> },
   { label: "Jack Smith" },
   { label: "Paige Henchen" },
 ];
