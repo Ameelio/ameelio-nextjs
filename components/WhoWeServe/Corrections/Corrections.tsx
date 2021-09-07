@@ -11,7 +11,7 @@ import ProductCard from "components/Cards/ProductCard/ProductCard";
 import Image from "next/image";
 import LettersTracking from 'assets/Mockups/Letters/LettersTracking.png';
 import { LINKS } from "utils/constants";
-interface Props {}
+interface Props { }
 
 const Corrections = (props: Props) => {
   return (
@@ -26,7 +26,7 @@ const Corrections = (props: Props) => {
           desc="Support free video calls for family meetings and programming, while fully integrating your video and in-person visitation systems"
           cta={{ text: "Request a Demo", link: LINKS.CONNECT_DEMO }}
           image={
-            <div style={{ width: 245, height: 185}}>
+            <div style={{ width: 245, height: 185 }}>
               <Image
                 src="/static/images/MikeUsingConnect.png"
                 alt="Correctional staff using Connect"
@@ -36,12 +36,12 @@ const Corrections = (props: Props) => {
             </div>
           }
         />
-         <ProductCard
+        <ProductCard
           type="letters"
           desc="Guarantee tamper-proof mail by approving our contactless printing and shipping solution"
-          cta={{ text: "Get in Touch", link: LINKS.GET_IN_TOUCH  }}
+          cta={{ text: "Get in Touch", link: LINKS.GET_IN_TOUCH }}
           image={
-            <div style={{ width: 240, height: 300}}>
+            <div style={{ width: 240, height: 300 }}>
               <Image
                 src={LettersTracking}
                 alt="Correctional staff using Connect"
@@ -51,9 +51,7 @@ const Corrections = (props: Props) => {
         />
       </PaddedLayout>
       <StepByStep />
-      <div className="bg-blue-700">
-        <MediaShowcase title="Ameelio in the Press" titleClassName="text-white opacity-50"/>
-      </div>
+      <MediaShowcase title="Ameelio in the Press" titleClassName="text-white opacity-50" className="bg-blue-700" />
       <FundersShowcase />
     </Layout.Content>
   );

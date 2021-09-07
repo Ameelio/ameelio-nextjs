@@ -47,11 +47,15 @@ const MEDIA: TShowcaseItem[] = [
 interface Props extends Omit<ShowCaseProps, 'items'> {
   className?: string;
 }
-const MediaShowcase = ({className, ...props}: Props) => {
+const MediaShowcase = ({ className, ...props }: Props) => {
   return (
-    <PaddedLayout className={className}>
-      <Showcase items={MEDIA} {...props} />
-    </PaddedLayout>
+    <div className={className}>
+
+      <PaddedLayout>
+        <Showcase items={MEDIA} {...props} />
+      </PaddedLayout>
+    </div>
+
   );
 };
 

@@ -38,7 +38,7 @@ const Showcase = ({
               ) : (
                 <div className="flex flex-col align-center w-full text-center">
                   <span className="text-gray-400 text-2xl">
-                    {firstNames.join(' ')}
+                    {firstNames.reverse().join(' ')}
                   </span>
                   <span className="font-bold text-gray-400 text-3xl">
                     {lastName}

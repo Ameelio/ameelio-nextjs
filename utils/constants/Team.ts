@@ -127,14 +127,14 @@ export const TECH_BOARD: TBoardMember[] = [
   {
     imageSrc: "/static/images/Board/Bart.png",
     name: "Bart Decrem",
-    title: "Studio Lead",
-    company: "Mozilla",
+    title: "Co-Founder",
+    company: "BLOCK::BLOCK",
   },
   {
     imageSrc: "/static/images/Board/Bijan.png",
     name: "Bijan Marashi",
-    title: "Studio Lead",
-    company: "Mozilla",
+    title: "Founder",
+    company: "Bijmatic",
   },
   {
     imageSrc: "/static/images/Board/RJ.png",

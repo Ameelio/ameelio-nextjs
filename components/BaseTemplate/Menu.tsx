@@ -94,6 +94,9 @@ const Menu = (props: Props) => {
         <AntdMenu.Item key="who-we-serve-corrections">
           <NextLink href="/who-we-serve/corrections">Corrections</NextLink>
         </AntdMenu.Item>
+        <AntdMenu.Item key="who-we-serve-educators">
+          <NextLink href="/who-we-serve/educators">Educators</NextLink>
+        </AntdMenu.Item>
       </AntdMenu.SubMenu>
       <AntdMenu.SubMenu title="Our Story" key="our-story">
         <AntdMenu.Item key="our-story-problem">
