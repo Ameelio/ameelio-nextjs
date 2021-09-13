@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Gabe's deployment script
+scripts/rollout.sh

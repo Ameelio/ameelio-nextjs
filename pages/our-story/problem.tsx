@@ -20,7 +20,6 @@ const ProblemPage = (props: Props) => {
   useEffect(() => {
     if (!node.current) return;
 
-    console.log(node.current);
     setMinHeight(node.current.clientHeight);
   }, [node]);
 

@@ -22,7 +22,7 @@ const Educators = (props: Props) => {
         <ProductCard
           type="connect"
           desc="Discover how you can leverage our communications platform to enhance instruction and provide increased access to on-campus resources."
-          cta={{ text: "Sign the Petition", link: LINKS.PETITION }}
+          cta={{ text: "Get in Touch", link: LINKS.GET_IN_TOUCH }}
           image={
             <div style={{ width: 240, height: 300 }}>
               <Image
