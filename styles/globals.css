@@ -1,9 +1,20 @@
 @import "~antd/dist/antd.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
 
-
 body {
   background-color: #ebfafb !important;
   font-family: "Inter", sans-serif !important;
+  font-size: 16px;
 }
 
+.ant-card {
+  font-size: 16px;
+}
+
+.problem-gradient {
+  background: linear-gradient(180deg, #3b342c 0%, #0f2d57 100%);
+}
+
+.problem-image-gradient {
+  background: linear-gradient(180deg, #0c2c5a 0%, rgba(12, 44, 90, 0) 31.12%);
+}

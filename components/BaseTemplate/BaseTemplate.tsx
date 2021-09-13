@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { CSSProperties, ReactNode, useEffect } from "react";
 import { Layout } from "antd";
 import Footer from "components/Footer";
 import Link from "next/link";
@@ -11,9 +11,10 @@ import { hotjar } from "react-hotjar";
 interface Props {
   children: ReactNode | ReactNode[];
   className?: string;
+  style?: CSSProperties;
 }
 
-const BaseTemplate = ({ children, className }: Props) => {
+const BaseTemplate = ({ children, className, style }: Props) => {
   useEffect(() => {
     const hjid = process.env.NEXT_PUBLIC_HJID;
     const hjsv = process.env.NEXT_PUBLIC_HJSV;
@@ -22,7 +23,10 @@ const BaseTemplate = ({ children, className }: Props) => {
   }, []);
 
   return (
-    <Layout className={`max-w-screen overflow-hidden ${className}`}>
+    <Layout
+      className={`max-w-screen overflow-hidden ${className}`}
+      style={style}
+    >
       <Head>
         <link
           rel="icon"

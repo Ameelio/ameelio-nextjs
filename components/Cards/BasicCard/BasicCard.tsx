@@ -5,7 +5,7 @@ interface Props extends CardProps {
 
 const BasicCard = (props: Props) => {
     return (
-        <Card {...props} className={`${props.className} rounded`} /> 
+        <Card {...props} className={`rounded ${props.className}`} /> 
     )
 }
 
