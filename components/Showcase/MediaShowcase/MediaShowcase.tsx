@@ -14,7 +14,7 @@ import PaddedLayout from "components/Layout/PaddedLayout";
 const MEDIA: TShowcaseItem[] = [
   {
     asset: <Bloomberg />,
-    link: "https://www.forbes.com/sites/angelauyeung/2020/09/21/the-prison-communications-nonprofit-backed-by-twitters-jack-dorsey-and-former-google-chief-eric-schmidt/#139203bc3b92",
+    link: "https://www.bloomberg.com/news/articles/2021-09-08/nonprofit-aims-to-disrupt-pricey-prison-telecom-industry?sref=Y5NzbMHF",
     label: "Bloomberg",
   },
   {

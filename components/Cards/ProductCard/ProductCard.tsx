@@ -30,7 +30,7 @@ const ProductCard = ({ image, type, desc, cta, disableSecondary }: Props) => {
 
   return (
     <BasicCard>
-      <div className="flex flex-col-reverse   md:grid md:grid-cols-3 items-center overflow-hidden">
+      <div className="flex flex-col-reverse md:grid md:grid-cols-3 md:gap-x-8 items-center overflow-hidden">
         {image}
         <div className="flex flex-col items-center md:items-start md:justify-center gap-y-8 md:col-span-2	">
           {getHeaderLogo()}

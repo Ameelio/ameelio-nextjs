@@ -30,7 +30,7 @@ const Showcase = ({
               key={item.label}
               className={`${itemClassName} w-1/3 mt-16 flex justify-center ${
                 item.link ? "cursor-pointer" : ""
-              }}`}
+              }`}
               onClick={() => item.link && window.open(item.link, "_blank")}
             >
               {item.asset ? (

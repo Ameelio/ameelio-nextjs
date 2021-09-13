@@ -37,10 +37,12 @@ const Educators = (props: Props) => {
           desc="Enhance your curriculum with an LMS built for corrections, providing students access to lessons, research resources, and assignment submission."
           cta={{ text: "Get in Touch", link: LINKS.LMS_DEMO }}
           image={
-            <div style={{ width: 240, height: 300 }}>
+            <div className="py-8">
               <Image
-                src={ConnectInCall}
+                src="/static/images/Mockups/LMS.png"
                 alt="Correctional staff using Connect"
+                width="512"
+                height="284"
               />
             </div>
           }
