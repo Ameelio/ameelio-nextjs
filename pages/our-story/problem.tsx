@@ -2,17 +2,19 @@ import React from "react";
 import BaseTemplate from "components/BaseTemplate";
 import Head from "next/head";
 import PaddedLayout from "components/Layout/PaddedLayout";
-import { H2 } from "components/Typography";
+import { H1, H2, H3 } from "components/Typography";
 import PayPhone from "assets/OurStory/PayPhone.png";
 import Image from "next/image";
 import BasicCard from "components/Cards/BasicCard";
 import OurStoryBackground from "assets/Backgrounds/OurStoryBackground";
+import ValuePropCard from "components/Cards/ValuePropCard";
+import { PROBLEM_VALUE_PROP } from "utils/constants";
 
 interface Props {}
 
 const ProblemPage = (props: Props) => {
   return (
-    <BaseTemplate className="bg-blue-100">
+    <BaseTemplate>
       <Head>
         <title>
           Ameelio: Understanding the problem of prison telecommunicationn
@@ -24,55 +26,74 @@ const ProblemPage = (props: Props) => {
         />
       </Head>
       <OurStoryBackground className="absolute top-1/4 object-cover z-0" />
-      <PaddedLayout>
-        <BasicCard>
-          <div className="block">
-            <H2 className="mb-8">Understanding the problem of prison telecommunication</H2>
-            <div>
-              <div className="md:float-left mr-8">
-                <Image
-                  src={PayPhone}
-                  width={220}
-                  height={336}
-                  alt="Pay phone"
-                />
-              </div>
-              <p className="break-normal mb-4">
-                Prison communications are expensive, posing an obstacle to
-                family contact. While increased family contact can reduce
-                recidivism by 56%, the cost of staying in touch with an
-                incarcerated loved one forces 1 in 3 families into debt. It is
-                in the public interest to ensure that incarcerated people can
-                easily maintain supportive relationships with their friends and
-                family on the outside.
+      <div>
+        <PaddedLayout>
+          <BasicCard className="grid space-y-8 items-center text-center">
+            <H2>Why prison communication and education?</H2>
+            <span>
+              For incarcerated people and their families, access to free
+              communication and education can change everything.
+            </span>
+          </BasicCard>
+        </PaddedLayout>
+
+        <PaddedLayout>
+          <div className="grid md:grid-cols-4  md:gap-x-8">
+            <BasicCard>
+              <p className="text-lg font-bold text-center">
+                113 million people in America have had an immediate family
+                member incarcerated.
               </p>
-              <p className="break-normal mb-4">
-                While on the outside we have access to free video calls, email,
-                and very inexpensive phone calls, incarcerated people may need
-                to pay as much as $25 per call and $1.50 per email. The profits
-                from these services support a $3 billion industry that is
-                dominated by a private equity backed duopoly.
-              </p  >
-              <p className="break-normal	mb-4" >
-                That’s why Ameelio exists, to disrupt the for-profit prison
-                communications industry, and provide a suite of communication
-                tools which support family contact and break the cycle of
-                intergenerational harm. By providing a free video and
-                e-messaging platform, and by making it easy for corrections
-                officials to adopt our platform, we serve the public by
-                promoting accessible quality family contact in a secure
-                correctional environment. Beyond family contact, we encourage
-                officials to use our suite of communications tools to supplement
-                existing programming to improve rehabilitative outcomes. With
-                our low-cost technology, we can support secure contact between
-                incarcerated individuals and their counselors, educators, and
-                programs in a way that is impossible under the incumbent
-                for-profit model.
-              </p  >
-            </div>
+            </BasicCard>
+            <BasicCard className="col-span-3">
+              <p className="text-center">
+                That’s nearly 1 in 2 of all adults in the U.S. Two billion
+                dollar companies (worth a collective $3 billion dollars)
+                dominate all of prison communications, charging as much as $25
+                per phone call and $1.50 per email. This is driving 1 in 3
+                families with incarcerated loved ones into debt, and restricting
+                the education access of the over 2.2 million incarcerated
+                people. Ameelio’s platform is disrupting this broken system. By
+                connecting people in prison and families with free-to-use
+                communication and education software, we free them from
+                financial exploitation, and empower them to chart their own
+                paths toward successful reentry from day one.
+              </p>
+            </BasicCard>
           </div>
-        </BasicCard>
-      </PaddedLayout>
+        </PaddedLayout>
+
+        <PaddedLayout>
+          <div className="grid space-y-4">
+            <H3 className="text-white">
+              Free communication and education changes everything.
+            </H3>
+            <ValuePropCard valueProps={PROBLEM_VALUE_PROP} />
+          </div>
+        </PaddedLayout>
+
+        <PaddedLayout className="grid md:grid-cols-2" marginRight="0%">
+          <BasicCard>
+            <div className="grid space-y-8">
+              <H2>
+                Every $1 invested in providing prison education and
+                communication can yield $4-$5 in economic returns.
+              </H2>
+              <p>
+                It’s a solid investment; access to education and free
+                communication is one of the most important things we can do to
+                fight mass incarceration.
+              </p>
+            </div>
+          </BasicCard>
+          <Image
+            src="/static/images/Problem/Graduates.png"
+            width="576"
+            height="458"
+            alt="Incarcerated graduates"
+          />
+        </PaddedLayout>
+      </div>
     </BaseTemplate>
   );
 };
