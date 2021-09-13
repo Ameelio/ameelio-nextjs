@@ -20,12 +20,12 @@ const ProblemPage = (props: Props) => {
   useEffect(() => {
     if (!node.current) return;
 
-    console.log(node.current.clientHeight);
+    console.log(node.current);
     setMinHeight(node.current.clientHeight);
   }, [node]);
 
   return (
-    <BaseTemplate className="bg-blue-100 overflow-auto" style={{ minHeight }}>
+    <BaseTemplate className="bg-blue-100">
       <Head>
         <title>
           Ameelio: Understanding the problem of prison telecommunicationn
@@ -37,23 +37,27 @@ const ProblemPage = (props: Props) => {
         />
       </Head>
 
-      <div className="absolute grid top-1/4 z-0" ref={node}>
-        <BackgroundImage
-          src={"/static/images/Problem/GraduationHug.png"}
-          alt="Graduate hugging loved one"
-        />
-        <BackgroundImage
-          src={"/static/images/Problem/PersonHoldingPicture.png"}
-          alt="Graduate hugging loved one"
-        />
-        <BackgroundImage
-          src={"/static/images/Problem/Hugs.png"}
-          alt="Graduate hugging loved one"
-          classname="problem-image-gradient"
-        />
-      </div>
+      <div className="grid md:space-y-4 lg:gap-y-48 " style={{ minHeight }}>
+        {/* Background */}
+        <div className="absolute grid z-0" ref={node}>
+          <BackgroundImage
+            src={"/static/images/Problem/GraduationHug.png"}
+            alt="Graduate hugging loved one"
+          />
+          <BackgroundImage
+            src={"/static/images/Problem/PersonHoldingPicture.png"}
+            alt="Graduate hugging loved one"
+          />
+          <div className="w-screen h-96	lg:h-64 problem-gradient" />
+          <BackgroundImage
+            src={"/static/images/Problem/Hugs.png"}
+            alt="Graduate hugging loved one"
+            classname="problem-image-gradient"
+          />
+          <div className="w-screen h-96	lg:h-48 2xl:h-0 problem-gradient " />
+        </div>
 
-      <div className="grid md:space-y-48">
+        {/* Components */}
         <PaddedLayout>
           <BasicCard>
             <div className="grid space-y-4 items-center text-center md:p-8">
@@ -67,7 +71,7 @@ const ProblemPage = (props: Props) => {
         </PaddedLayout>
 
         <PaddedLayout>
-          <div className="justify-center gap-y-8 md:grid  md:grid-cols-4  md:gap-x-8">
+          <div className="flex flex-col gap-y-8 lg:grid  lg:grid-cols-4  md:gap-x-8">
             <BasicCard>
               <p className="text-2xl font-bold text-center">
                 113 million people in America have had an immediate family
@@ -101,7 +105,7 @@ const ProblemPage = (props: Props) => {
           </div>
         </PaddedLayout>
 
-        <PaddedLayout className="grid md:grid-cols-2">
+        <PaddedLayout className="flex flex-col-reverse flex md:grid md:grid-cols-2">
           <BasicCard className="rounded-tr-none rounded-br-none">
             <div className="grid space-y-8 md:p-8">
               <H2>
