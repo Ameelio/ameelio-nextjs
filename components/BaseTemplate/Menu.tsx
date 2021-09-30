@@ -28,7 +28,7 @@ const ProductMenuItem = ({ type }: { type: "letters" | "connect" }) => (
             <ConnectWordmark /> <ConnectLogo />
           </div>
         )}
-        <span className="text-gray-600">
+        <span className="text-gray-400">
           {type === "letters"
             ? "Free letters & photo cards to prison"
             : "Free & secure video calls with incarcerated people"}
@@ -55,29 +55,35 @@ const Menu = (props: Props) => {
       >
         <div className="flex flex-col gap-y-8">
           <div className="flex flex-col gap-y-2">
-            <span className="text-gray-600">PRODUCTS</span>
+            <span className="text-gray-400">PRODUCTS</span>
             <ProductMenuItem type="connect" />
             <ProductMenuItem type="letters" />
           </div>
-
+          <hr />
           <div className="flex flex-col gap-y-2">
-            <span className="text-gray-600">WHO WE SERVE</span>
+            <span className="text-gray-400">WHO WE SERVE</span>
             <Link text="Loved Ones" href="/who-we-serve/loved-ones" />
             <Link text="Corrections" href="/who-we-serve/corrections" />
           </div>
-
+          <hr />
           <div className="flex flex-col gap-y-2">
-            <span className="text-gray-600">OUR STORY</span>
+            <span className="text-gray-400">OUR STORY</span>
             <Link text="Understanding The Problem" href="/our-story/problem" />
             <Link text="Meet The Team" href="/our-story/team" />
             <Link text="Get In Touch" href={LINKS.GET_IN_TOUCH} external />
             <Link text="We're Hiring" href={LINKS.HIRING} external />
           </div>
+          <hr />
+          <div className="flex flex-col gap-y-2">
+            <span className="text-gray-400">SUPPORT</span>
+            <Link text="Letters FAQ" href={LINKS.ZENDESK_LETTERS} external />
+            <Link text="Connect FAQ" href={LINKS.ZENDESK_CONNECT} external />
+          </div>
         </div>
       </Drawer>
     </span>
   ) : (
-    <AntdMenu mode="horizontal">
+    <AntdMenu mode="horizontal" className="">
       <AntdMenu.SubMenu title="Platform" key="products">
         <AntdMenu.Item key="products-connect">
           <NextLink href="/products/connect">Connect</NextLink>
@@ -110,6 +116,15 @@ const Menu = (props: Props) => {
         </AntdMenu.Item>
         <AntdMenu.Item key="our-story-hiring">
           <Link text="We're Hiring" href={LINKS.HIRING} external />
+        </AntdMenu.Item>
+      </AntdMenu.SubMenu>
+
+      <AntdMenu.SubMenu title="Support" key="support">
+        <AntdMenu.Item key="letters-faq">
+          <Link text="Letters FAQ" href={LINKS.ZENDESK_LETTERS} external />
+        </AntdMenu.Item>
+        <AntdMenu.Item key="our-story-team">
+          <Link text="Connect FAQ" href={LINKS.ZENDESK_CONNECT} external />
         </AntdMenu.Item>
       </AntdMenu.SubMenu>
     </AntdMenu>
