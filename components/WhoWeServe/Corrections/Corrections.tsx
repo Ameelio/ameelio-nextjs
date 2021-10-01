@@ -9,15 +9,18 @@ import FundersShowcase from "components/Showcase/FundersShowcase";
 import PaddedLayout from "components/Layout/PaddedLayout";
 import ProductCard from "components/Cards/ProductCard/ProductCard";
 import Image from "next/image";
-import LettersTracking from 'assets/Mockups/Letters/LettersTracking.png';
+import LettersTracking from "assets/Mockups/Letters/LettersTracking.png";
 import { LINKS } from "utils/constants";
-interface Props { }
+import DenverVideoCard from "components/Cards/DenverVideoCard";
+interface Props {}
 
 const Corrections = (props: Props) => {
   return (
     <Layout.Content>
       <CorrectionsHero />
-
+      <PaddedLayout>
+        <DenverVideoCard />
+      </PaddedLayout>
       <Testimonial {...MIKE} />
 
       <PaddedLayout className="flex flex-col gap-y-8">
@@ -51,7 +54,11 @@ const Corrections = (props: Props) => {
         />
       </PaddedLayout>
       <StepByStep />
-      <MediaShowcase title="Ameelio in the Press" titleClassName="text-white opacity-50" className="bg-blue-700" />
+      <MediaShowcase
+        title="Ameelio in the Press"
+        titleClassName="text-white opacity-50"
+        className="bg-blue-700"
+      />
       <FundersShowcase />
     </Layout.Content>
   );
