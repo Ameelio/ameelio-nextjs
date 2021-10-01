@@ -10,7 +10,7 @@ import ReviewWall from "components/Home/ReviewWall";
 import BasicCard from "components/Cards/BasicCard";
 import { H2 } from "components/Typography";
 import ConnectInCall from "assets/Mockups/Connect/ConnectInCall.png";
-import { LINKS } from "utils/constants";
+import DenverVideoCard from "components/Cards/DenverVideoCard";
 
 interface Props {}
 
@@ -18,6 +18,9 @@ const LovedOnes = (props: Props) => {
   return (
     <Layout.Content>
       <LovedOnesHero />
+      <PaddedLayout>
+        <DenverVideoCard />
+      </PaddedLayout>
       <Testimonial {...TARALYNN} />
 
       <PaddedLayout className="flex flex-col gap-y-8">

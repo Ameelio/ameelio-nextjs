@@ -16,8 +16,6 @@ const ProductMenuItem = ({ type }: { type: "letters" | "connect" }) => (
     href={type === "letters" ? "/products/letters" : "/products/connect"}
   >
     <div className="flex space-x-4 items-center">
-      {/* <div>{type === "letters" ? <LettersLogo /> : <ConnectLogo />}</div> */}
-
       <div className="flex flex-col">
         {type === "letters" ? (
           <div className="flex items-center space-x-2 w-5/12">

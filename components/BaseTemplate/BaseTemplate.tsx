@@ -24,7 +24,7 @@ const BaseTemplate = ({ children, className, style }: Props) => {
 
   return (
     <Layout
-      className={`max-w-screen overflow-hidden ${className}`}
+      className={`max-w-screen overflow-hidden  bg-blue-100 ${className}`}
       style={style}
     >
       <Head>
