@@ -24,7 +24,7 @@ const LovedOnes = (props: Props) => {
         <ProductCard
           type="connect"
           desc="Become a registered visitor, schedule a call, and join free video meetings with your incarcerated loved one"
-          cta={{ text: "Sign the Petition", link: LINKS.PETITION }}
+          cta={{ text: "Sign the Petition", link: 'petition' }}
           image={
             <div style={{ width: 240, height: 300 }}>
               <Image

@@ -8,6 +8,7 @@ import AppStoreButtonDuo from "components/Button/AppStoreButtonDuo";
 import Button from "components/Button";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { H3 } from "components/Typography";
+import { useAppContext } from "context/state";
 interface Props {
   image: React.ReactNode;
   type: "letters" | "connect" | "lms";
@@ -17,14 +18,16 @@ interface Props {
 }
 
 const ProductCard = ({ image, type, desc, cta, disableSecondary }: Props) => {
+  const { togglePetitionModal } = useAppContext();
+
   const getHeaderLogo = () => {
     switch (type) {
       case "letters":
         return <LettersWordmark />;
-      case 'connect':
-        return <ConnectWordmark />
-      case 'lms':
-        return <H3>Coming soon!</H3>
+      case "connect":
+        return <ConnectWordmark />;
+      case "lms":
+        return <H3>Coming soon!</H3>;
     }
   };
 
@@ -40,12 +43,20 @@ const ProductCard = ({ image, type, desc, cta, disableSecondary }: Props) => {
           ) : (
             <Button
               variant="primary"
-              onClick={() => window.open(cta.link, "_blank")}
+              onClick={() => {
+                if (cta.link === "petition") {
+                  togglePetitionModal();
+                  return;
+                }
+                window.open(cta.link, "_blank");
+              }}
             >
               {cta.text}
             </Button>
           )}
-          {!disableSecondary && <Link href={`/products/${type}`} text="Learn more" />}
+          {!disableSecondary && (
+            <Link href={`/products/${type}`} text="Learn more" />
+          )}
         </div>
       </div>
     </BasicCard>

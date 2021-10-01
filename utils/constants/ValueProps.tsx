@@ -24,7 +24,7 @@ export const CONNECT_VALUE_PROPS: TValuePropItem[] = [
     icon: <HeartTwoTone className="text-4xl" />,
     title: "Connect is completely free for families.",
     body: "You can download Connect from the app store on any Apple or Android device. Once you create your profile, you can add your loved one and request to be added as their contact. Once corrections officials approve you as a visitor, you will then be able to schedule video calls.",
-    cta: { text: "Sign the petition", link: LINKS.PETITION },
+    cta: { text: "Sign the petition", link: 'petition' },
   },
   {
     icon: <SafetyCertificateTwoTone className="text-4xl" />,

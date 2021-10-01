@@ -28,7 +28,7 @@ const Showcase = ({
           return (
             <div
               key={item.label}
-              className={`${itemClassName} w-1/3 mt-16 flex justify-center ${
+              className={`${itemClassName || ''} w-1/3 mt-16 flex justify-center ${
                 item.link ? "cursor-pointer" : ""
               }`}
               onClick={() => item.link && window.open(item.link, "_blank")}
