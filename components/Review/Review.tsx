@@ -3,10 +3,11 @@ import { TReviewItem } from "types";
 import { Rate, Typography } from "antd";
 import BasicCard from "components/Cards/BasicCard";
 import Image from "next/image";
-import Paragraph from "antd/lib/skeleton/Paragraph";
 interface Props extends TReviewItem {}
 
-const Review = ({ author, quote, imageSrc }: Props) => {
+const Review = (props: Props) => {
+  const { author, quote, imageSrc, date, link } = props;
+
   return (
     <BasicCard>
       <div>
@@ -21,11 +22,16 @@ const Review = ({ author, quote, imageSrc }: Props) => {
             <span className="font-bold">{author}</span>
             <Rate value={5} />
           </div>
+          <span className="text-gray-300 ml-auto self-start">{date}</span>
         </div>
 
         <Typography.Paragraph className="mt-4" ellipsis={{ rows: 3 }}>
           {quote}
         </Typography.Paragraph>
+
+        <Typography.Link onClick={() => window.open(link, "_blank")}>
+          Read review
+        </Typography.Link>
       </div>
     </BasicCard>
   );

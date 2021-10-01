@@ -18,7 +18,7 @@ const ReviewWall = (props: Props) => {
       <div
         className="grid grid-rows:3 md:grid-rows:2 gap-4 overflow-x-auto grid-flow-column"
         style={{
-          gridTemplateColumns: "repeat(15, 325px)",
+          gridTemplateColumns: "repeat(18, 400px)",
         }}
       >
         {REVIEWS.map((testimonial) => (

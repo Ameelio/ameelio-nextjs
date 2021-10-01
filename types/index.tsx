@@ -12,9 +12,14 @@ export interface TReviewItem {
   imageSrc: string;
   quote: string;
   author: string;
+  date: string;
+  link: string;
 }
 
-export interface TTestimonialItem extends TReviewItem {
+export interface TTestimonialItem {
+  imageSrc: string;
+  quote: string;
+  author: string;
   occupation: string;
 }
 
