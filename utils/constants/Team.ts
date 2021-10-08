@@ -79,12 +79,12 @@ export const TECH_BOARD: TBoardMember[] = [
     title: "Board Member",
     company: "ProPublica",
   },
-  {
-    imageSrc: "/static/images/Board/Anjali.png",
-    name: "Anjali Kumar",
-    title: "Co-Founder",
-    company: "COVID Tech Connect",
-  },
+  // {
+  //   imageSrc: "/static/images/Board/Anjali.png",
+  //   name: "Anjali Kumar",
+  //   title: "Co-Founder",
+  //   company: "COVID Tech Connect",
+  // },
   {
     imageSrc: "/static/images/Board/Raphael.png",
     name: "Raphael Lee",
