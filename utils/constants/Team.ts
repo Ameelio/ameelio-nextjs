@@ -162,7 +162,7 @@ export const JUSTICE_BOARD: TBoardMember[] = [
   },
   {
     imageSrc: "/static/images/Board/Cindy.png",
-    name: "Cindy Weining",
+    name: "Cindy Wenig",
     title: "Board Member",
     company: "Young New Yorkers",
   },
