@@ -25,6 +25,7 @@ const PasswordReset = (props: Props) => {
 
   const handleClick = async () => {
     setState("loading");
+
     try {
       const result = await fetch(
         `https://api.ameelio.org/api/v1/password/reset`,
@@ -42,7 +43,6 @@ const PasswordReset = (props: Props) => {
           }),
         }
       );
-      console.log(result);
 
       if (result.status !== 201 && result.status !== 200) throw result;
       message.success(
