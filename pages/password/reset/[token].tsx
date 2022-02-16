@@ -44,15 +44,15 @@ const PasswordReset = (props: Props) => {
         }
       );
 
-      if (result.status !== 201 && result.status !== 200) throw result;
+      if (result.status !== 201 && result.status !== 200) throw result.body;
       message.success(
         "The email was sent! Check your inbox. This might take a couple of minutes."
       );
       setState("submitted");
     } catch (err) {
       message.error(`Request failed. Error message: ${JSON.stringify(err)}`);
+      setState("pristine");
     }
-    setState("pristine");
   };
 
   const TIP = "Your password must be at least 8 characters long";
