@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "antd": "^4.16.6",
+    "i": "^0.3.7",
+    "luxon": "^2.3.0",
     "next": "11.0.1",
+    "npm": "^8.5.0",
     "react": "17.0.2",
     "react-cool-dimensions": "^2.0.7",
     "react-device-detect": "^1.17.0",
@@ -19,6 +22,7 @@
     "react-player": "^2.9.0"
   },
   "devDependencies": {
+    "@types/luxon": "^2.0.9",
     "@types/react": "17.0.11",
     "autoprefixer": "^10.2.6",
     "eslint": "7.29.0",
