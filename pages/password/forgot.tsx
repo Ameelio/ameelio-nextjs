@@ -14,7 +14,7 @@ const PasswordReset = (props: Props) => {
   const handleClick = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://api.ameelio.org/api/v1/password/email", {
+      const res = await fetch("/api/password/email", {
         method: "POST",
         cache: "no-cache",
         headers: {

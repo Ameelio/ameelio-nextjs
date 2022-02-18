@@ -27,22 +27,19 @@ const PasswordReset = (props: Props) => {
     setState("loading");
 
     try {
-      const result = await fetch(
-        `https://api.ameelio.org/api/v1/password/reset`,
-        {
-          method: "POST",
-          cache: "no-cache",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            password,
-            password_confirmation: passwordConfirmation,
-            token,
-          }),
-        }
-      );
+      const result = await fetch(`/api/password/reset`, {
+        method: "POST",
+        cache: "no-cache",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          password,
+          password_confirmation: passwordConfirmation,
+          token,
+        }),
+      });
 
       if (result.status !== 201 && result.status !== 200) throw result.body;
       message.success(
