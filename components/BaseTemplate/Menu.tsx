@@ -67,7 +67,7 @@ const Menu = (props: Props) => {
           <div className="flex flex-col gap-y-2">
             <span className="text-gray-400">OUR STORY</span>
             <Link text="Understanding The Problem" href="/our-story/problem" />
-            <Link text="Meet The Team" href="/our-story/team" />
+            {/* <Link text="Meet The Team" href="/our-story/team" /> */}
             <Link text="Get In Touch" href={LINKS.GET_IN_TOUCH} external />
             <Link text="We're Hiring" href={LINKS.HIRING} external />
           </div>
@@ -106,9 +106,9 @@ const Menu = (props: Props) => {
         <AntdMenu.Item key="our-story-problem">
           <NextLink href="/our-story/problem">The Problem</NextLink>
         </AntdMenu.Item>
-        <AntdMenu.Item key="our-story-team">
+        {/* <AntdMenu.Item key="our-story-team">
           <NextLink href="/our-story/team">Team</NextLink>
-        </AntdMenu.Item>
+        </AntdMenu.Item> */}
         <AntdMenu.Item key="our-story-get-in-touch">
           <Link text="Get In Touch" href={LINKS.GET_IN_TOUCH} external />
         </AntdMenu.Item>
