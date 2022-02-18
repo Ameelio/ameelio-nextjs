@@ -27,7 +27,7 @@ const PasswordReset = (props: Props) => {
     setState("loading");
 
     try {
-      const result = await fetch(`https://api.ameelio.org/v1/password/reset`, {
+      const result = await fetch(`/api/password/reset`, {
         method: "POST",
         cache: "no-cache",
         headers: {
