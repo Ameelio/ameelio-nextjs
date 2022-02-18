@@ -35,8 +35,8 @@ const PasswordReset = (props: Props) => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          password,
-          password_confirmation: passwordConfirmation,
+          password: password.value,
+          passwordConfirmation: passwordConfirmation.value,
           token,
         }),
       });
