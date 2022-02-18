@@ -27,7 +27,7 @@ const PasswordReset = (props: Props) => {
     setState("loading");
 
     try {
-      const result = await fetch(`/api/password/reset`, {
+      const result = await fetch(`https://api.ameelio.org/v1/password/reset`, {
         method: "POST",
         cache: "no-cache",
         headers: {
@@ -95,7 +95,7 @@ const PasswordReset = (props: Props) => {
                       ? undefined
                       : "Your password must be at least 8 characters long";
                     setPassword({
-                      value: e.target.value,
+                      value: e.target.value.trim(),
                       validateStatus,
                       errorMsg,
                     });
@@ -124,7 +124,7 @@ const PasswordReset = (props: Props) => {
                       ? undefined
                       : "Your passwords do not match";
                     setPasswordConfirmation({
-                      value: e.target.value,
+                      value: e.target.value.trim(),
                       validateStatus,
                       errorMsg,
                     });
