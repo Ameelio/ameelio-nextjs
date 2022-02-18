@@ -21,7 +21,7 @@ spec:
         runAsNonRoot: true
         runAsUser: 9999
       containers:
-      - image: registry.digitalocean.com/ameelio-registry/ameelio-org-v-2:latest
+      - image: registry.digitalocean.com/ameelio-registry/ameelio-org-v-2:${RELEASE_VERSION}
         name: ameelio-org-v2
         imagePullPolicy: Always
         ports:
