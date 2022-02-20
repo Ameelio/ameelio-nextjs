@@ -42,9 +42,7 @@ const PasswordReset = (props: Props) => {
       });
 
       if (result.status !== 201 && result.status !== 200) throw result.body;
-      message.success(
-        "The email was sent! Check your inbox. This might take a couple of minutes."
-      );
+      message.success("Your password was reset successfully!");
       setState("submitted");
     } catch (err) {
       message.error(`Request failed. Error message: ${JSON.stringify(err)}`);
