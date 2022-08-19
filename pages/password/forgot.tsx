@@ -25,13 +25,15 @@ const PasswordReset = (props: Props) => {
           email: email,
         }),
       });
-      if (res.status !== 200 && res.status !== 201) throw res.body;
+      const body = await res.json();
+
+      if (res.status !== 200 && res.status !== 201) throw body;
       message.success(
         "The email was sent! Check your inbox. This might take a couple of minutes."
       );
       setHasAttempted(true);
     } catch (err) {
-      message.error(`Request failed. Error message: ${JSON.stringify(err)}`);
+      message.error(`Request failed: ${(err as any).message}`);
     }
     setLoading(false);
   };
