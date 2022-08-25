@@ -6,6 +6,7 @@ import PaddedLayout from "components/Layout/PaddedLayout";
 import { H2 } from "components/Typography";
 import BasicCard from "components/Cards/BasicCard";
 import Button from "components/Button";
+import Image from "next/image";
 
 const CiscoPage = () => {
   return (
@@ -42,13 +43,20 @@ const CiscoPage = () => {
               environment.
             </BasicCard>
           </div>
-
           <Button
             variant="primary"
             onClick={() => window.open("https://app.ameelio.org/login")}
           >
             Get Started
           </Button>
+          <div className="w-64 w-64">
+            <Image
+              src="/static/webex-logo.png"
+              alt="Webex Logo"
+              width={512}
+              height={216}
+            />
+          </div>
         </PaddedLayout>
       </div>
     </BaseTemplate>
